@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: { 'clash-display': ['ClashDisplay', 'sans-serif'] },
-      colors: { primary: 'FF5555' },
+      colors: { primary: '#FF5555' },
     },
   },
   plugins: [],

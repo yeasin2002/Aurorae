@@ -13,9 +13,9 @@
     @apply h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium  transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
   }
   .btn-default {
-    @apply bg-primary text-white ;
+    @apply bg-white text-black;
   }
   .btn-secondary {
-    @apply bg-black border border-black text-white ;
+    @apply bg-black border border-black text-white;
   }
 }
