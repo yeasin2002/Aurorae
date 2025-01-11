@@ -7,23 +7,15 @@ import { compression } from 'vite-plugin-compression2'
 import unFonts from 'unplugin-fonts/vite'
 import svgLoader from 'vite-svg-loader'
 
-// https://vite.dev/config/
+import { customFonts } from './config/fonts'
+
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
     compression(),
     svgLoader(),
-    unFonts({
-      custom: {
-        families: [
-          {
-            name: 'ClashDisplay',
-            src: './src/fonts/ClashDisplay-Regular.woff',
-          },
-        ],
-      },
-    }),
+    unFonts({ custom: { families: customFonts } }),
   ],
   resolve: {
     alias: {
