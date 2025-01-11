@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import HeroStrip from '@/assets/illustration/hero-stripe.svg?component'
+import HeroStrip from '@/assets/illustration/hero-stripe.svg?url'
 import PlayIcon from '@/assets/icons/play.svg?component'
-
-// mockups
-import MockupCompact from '@/assets/mockup/mockup-compact.svg?component'
-import Ellipse from '@/assets/ellipse/Ellipse 1.svg?component'
+import MockupCompact from '@/assets/mockup/mockup-compact.svg.svg?url'
+import EllipseRed from '@/assets/ellipse/elipse.png'
 </script>
 
 <template>
@@ -29,12 +27,13 @@ import Ellipse from '@/assets/ellipse/Ellipse 1.svg?component'
         </div>
       </div>
       <div>
-        <HeroStrip />
+        <img :src="HeroStrip" alt="strip" />
       </div>
     </div>
 
-    <div class="relative">
-      <MockupCompact />
+    <div class="relative hidden md:block">
+      <img :src="MockupCompact" class="z-0 isolate" alt="mockup" />
+      <img :src="EllipseRed" class="absolute bottom-0 left-0 z-10" />
     </div>
   </div>
 </template>
