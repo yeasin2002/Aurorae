@@ -1,3 +1,3 @@
 # uifry
 
-<img src="./public/cover.png" alt= "cover />
+![Cover](./public/cover.png)

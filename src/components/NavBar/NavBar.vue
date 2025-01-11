@@ -6,7 +6,7 @@ import MobileNav from './MobileNav.vue'
 <template>
   <div class="pt-6">
     <nav class="flex items-center justify-between gap-x-3">
-      <a class="text-primary">Furniture world </a>
+      <a class="text-primary font-clash-display">Furniture world </a>
       <div class="space-x-4 hidden lg:block">
         <a
           v-for="item in navigation"
@@ -17,7 +17,7 @@ import MobileNav from './MobileNav.vue'
           {{ item.name }}
         </a>
       </div>
-      <button class="btn btn-secondary hidden lg:block">Get Started</button>
+      <button class="btn btn-secondary hidden lg:block font-aeonik">Get Started</button>
       <MobileNav />
     </nav>
     <div class="h-[0.10rem] bg-gray-400 w-full my-4"></div>
