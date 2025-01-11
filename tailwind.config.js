@@ -3,7 +3,10 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,vue}'],
   theme: {
     extend: {
-      fontFamily: { 'clash-display': ['ClashDisplay', 'sans-serif'] },
+      fontFamily: {
+        'clash-display': ['ClashDisplay', 'sans-serif'],
+        aeonik: ['aeonik', 'sans-serif'],
+      },
       colors: { primary: '#FFD400', background: '#1B1D20' },
     },
   },

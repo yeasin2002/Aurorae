@@ -10,12 +10,12 @@
 
 @layer components {
   .btn {
-    @apply h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium  transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+    @apply h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-3xl text-sm font-medium  transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
   }
   .btn-default {
-    @apply bg-white text-black;
+    @apply bg-primary text-background;
   }
   .btn-secondary {
-    @apply bg-black border border-black text-white;
+    @apply bg-background border border-white text-white;
   }
 }
