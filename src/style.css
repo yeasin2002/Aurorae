@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-clash-display container;
+  }
+}
+
 @layer components {
   #app {
-    @apply container mx-auto; 
+    @apply container mx-auto;
   }
   .btn-dark {
     @apply bg-[#000000] text-white hover:bg-[#000000]/90 h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium  transition-colors focus-visible:outline-none focus-visible:ring-2  focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
