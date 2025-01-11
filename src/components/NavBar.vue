@@ -1,8 +1,16 @@
-<script lang="ts"></script>
+<script lang="ts">
+import Logo from '@/assets/illustration/logo.svg?component'
+
+export default {
+  name: 'NavBar',
+  components: { Logo },
+}
+</script>
 
 <template>
-  <div class="greetings">
-    <h1 class="bg-red-800">Hello</h1>
-    <h3>You’ve successfully created a project with</h3>
+  <div class="flex items-center justify-between py-6">
+    <Logo />
+    <div></div>
+    <button class="btn-dark">Download</button>
   </div>
 </template>
