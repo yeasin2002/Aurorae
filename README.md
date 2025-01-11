@@ -1,39 +1,5 @@
 # uifry
 
-This template should help get you started developing with Vue 3 in Vite.
+<img src="./public/Preview.svg" alt= "scover" />
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-bun install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-bun dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-bun run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-bun lint
-```
+##### This project is a visually engaging and modern app landing page designed to showcase a financial decision-making application. It features a sleek design with vibrant gradients, overlapping smartphone mockups, and decorative elements that enhance its aesthetic appeal. The layout is clean and responsive, focusing on user interaction and clear call-to-action elements to drive app downloads and engagement. The website aims to create a professional and compelling digital presence, combining strong visual hierarchy with smooth user experience to highlight the app's features and benefits effectively.
