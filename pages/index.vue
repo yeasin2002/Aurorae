@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import Button from "~/components/ui/button/Button.vue";
+import NavBar from "~/components/common/NavBar/NavBar.vue";
+import Hero from "~/components/index-page/HeroArea.vue";
+import Service from "~/components/index-page/OurService.vue";
+import Project from "~/components/index-page/ProjectShowCase.vue";
+import Footer from "~/components/common/FooterSection.vue";
 </script>
 
 <template>
   <div>
-    <h1 class="text-red-800">
-      Hello Form Root!!
-      <Button>Click</Button>
-    </h1>
+    <NavBar />
+    <Hero />
+    <Service />
+    <Project />
+    <Footer />
   </div>
 </template>
