@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { serviceData } from '@/data'
-import SectionHeader from './SectionHeader.vue'
-import LineArrow from '@/assets/icons/line-arrow.svg'
+import { serviceData } from "~/data";
+import SectionHeader from "./SectionHeader.vue";
+import LineArrow from "~/assets/icons/line-arrow.svg";
 </script>
 
 <template>
@@ -20,8 +20,12 @@ import LineArrow from '@/assets/icons/line-arrow.svg'
         class="flex items-center justify-between text-black border-b border-b-background py-8 group"
       >
         <div>
-          <p class="font-clash-display font-medium text-5xl">{{ item.label }}</p>
-          <p class="font-aeonik text-sm w-2/3 opacity-0 group-hover:opacity-100 transition-all">
+          <p class="font-clash-display font-medium text-5xl">
+            {{ item.label }}
+          </p>
+          <p
+            class="font-aeonik text-sm w-2/3 opacity-0 group-hover:opacity-100 transition-all"
+          >
             {{ item.desc }}
           </p>
         </div>

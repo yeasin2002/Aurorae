@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ArrowRight } from 'lucide-vue-next'
-import SectionHeader from './SectionHeader.vue'
-import { projectShowcase } from '@/data'
+import { ArrowRight } from "lucide-vue-next";
+import SectionHeader from "./SectionHeader.vue";
+import { projectShowcase } from "~/data";
 </script>
 
 <template>
@@ -26,14 +26,16 @@ import { projectShowcase } from '@/data'
         />
         <div class="flex flex-col justify-around col-span-4 mx-8">
           <div>
-            <h5 class="font-clash-display text-3xl font-medium">{{ item.label }}</h5>
+            <h5 class="font-clash-display text-3xl font-medium">
+              {{ item.label }}
+            </h5>
             <p class="font-aeonik text-lg mt-2">{{ item.dec }}</p>
           </div>
 
-          <a :href="item.link" class="flex  gap-x-3 text-xl">
+          <a :href="item.link" class="flex gap-x-3 text-xl">
             View project
             <span class="into-center rounded-full border border-black p-1">
-              <ArrowRight class="text-black " />
+              <ArrowRight class="text-black" />
             </span>
           </a>
         </div>

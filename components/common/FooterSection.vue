@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { footerData } from '@/data/footer.data'
+// import { footerData } from '~/data'
 </script>
 
 <template>
@@ -12,10 +12,13 @@ import { footerData } from '@/data/footer.data'
       </h6>
       <div class="space-y-4">
         <p class="font-aeonik w-4/5">
-          Interior design is the art of science of enhancing the interior of a building to achieve a
-          healthier and more aesthetically pleasing environment for the people using the space.
+          Interior design is the art of science of enhancing the interior of a
+          building to achieve a healthier and more aesthetically pleasing
+          environment for the people using the space.
         </p>
-        <button class="btn btn-default px-8 font-aeonik font-bold">Contact Now</button>
+        <button class="btn btn-default px-8 font-aeonik font-bold">
+          Contact Now
+        </button>
       </div>
     </div>
 
