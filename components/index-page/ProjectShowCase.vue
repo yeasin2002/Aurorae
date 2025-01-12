@@ -5,7 +5,7 @@ import { projectShowcase } from '~/data'
 </script>
 
 <template>
-  <div class="bg-white pt-8">
+  <div class="bg-white pb-8">
     <SectionHeader
       heading1="Our all projects "
       heading2="for clients"

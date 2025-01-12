@@ -1,3 +1,5 @@
+import { Facebook, Instagram, Twitter } from 'lucide-vue-next'
+
 export const footerData = [
   {
     label: 'Address',
@@ -9,6 +11,29 @@ export const footerData = [
   },
   {
     label: 'Our Policies',
-    menu: [`Privacy Policies`, `Terms of use `, `Refund Policy`],
+    menu: [
+      { label: 'Privacy Policy', url: '#' },
+      { label: 'Terms of Use', url: '#' },
+      { label: 'Refund Policy', url: '#' },
+    ],
+  },
+]
+
+export const footerSocial = [
+  {
+    label: 'Facebook',
+    link: '#',
+    icon: Facebook,
+  },
+  {
+    label: 'Twitter',
+    link: '#',
+    icon: Twitter,
+  },
+
+  {
+    label: 'Instagram',
+    link: '#',
+    icon: Instagram,
   },
 ]

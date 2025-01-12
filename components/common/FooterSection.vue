@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-// import { footerData } from '~/data'
+import { footerData, footerSocial } from '~/data'
+import Logo from '~/components/common/LogoFull.vue'
 </script>
 
 <template>
@@ -20,13 +21,35 @@
     </div>
 
     <!-- bottom contact area -->
-    <div class="pt-10">
-      <div>
-        <div>
-          <Logo />
+    <div class="grid grid-cols-12 pt-16 pb-6">
+      <div class="col-span-2">
+        <Logo />
+        <div class="mt-5 flex items-center gap-x-2">
+          <a
+            v-for="icon in footerSocial"
+            :key="icon.label"
+            :href="icon.label"
+            class="flex items-center justify-center rounded-full bg-white p-1"
+          >
+            <component :is="icon.icon" class="size-4 text-black" />
+          </a>
         </div>
       </div>
-      <div></div>
+
+      <div class="col-span-10 grid grid-cols-3">
+        <div v-for="item in footerData" :key="item.label">
+          <h6 class="font-clash-display text-3xl font-medium">{{ item.label }}</h6>
+          <div v-for="(data, index) in item.menu" :key="index" class="mt-2 font-aeonik text-sm text-gray-300">
+            <span v-if="typeof data === 'string'">
+              {{ data }}
+            </span>
+
+            <a v-else :href="data.url">
+              {{ data.label }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
