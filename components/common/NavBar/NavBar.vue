@@ -1,28 +1,26 @@
 <script lang="ts" setup>
-import { navigation } from "~/data";
-import MobileNav from "./MobileNav.vue";
-import Logo from "~/components/common/LogoFull.vue";
+import { navigation } from '~/data'
+import MobileNav from './MobileNav.vue'
+import Logo from '~/components/common/LogoFull.vue'
 </script>
 
 <template>
   <div class="pt-6">
     <nav class="flex items-center justify-between gap-x-3">
       <Logo />
-      <div class="space-x-4 hidden lg:block">
+      <div class="hidden space-x-4 lg:block">
         <a
           v-for="item in navigation"
           :key="item.name"
           :href="item.href"
-          class="font-medium font-aeonik"
+          class="font-aeonik font-medium"
         >
           {{ item.name }}
         </a>
       </div>
-      <button class="btn btn-secondary hidden lg:block font-aeonik">
-        Get Started
-      </button>
+      <button class="btn btn-secondary hidden font-aeonik lg:block">Get Started</button>
       <MobileNav />
     </nav>
-    <div class="h-[0.10rem] bg-gray-400 w-full my-4"></div>
+    <div class="my-4 h-[0.10rem] w-full bg-gray-400"></div>
   </div>
 </template>

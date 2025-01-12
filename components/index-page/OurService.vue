@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { serviceData } from "~/data";
-import SectionHeader from "./SectionHeader.vue";
-import LineArrow from "~/assets/icons/line-arrow.svg";
+import { serviceData } from '~/data'
+import SectionHeader from './SectionHeader.vue'
+import LineArrow from '~/assets/icons/line-arrow.svg'
 </script>
 
 <template>
@@ -13,26 +13,24 @@ import LineArrow from "~/assets/icons/line-arrow.svg";
     />
 
     <!-- server list -->
-    <div class="bg-primary pb-8 pt-14 px-10">
+    <div class="bg-primary px-10 pb-8 pt-14">
       <div
         v-for="item in serviceData"
         :key="item.label"
-        class="flex items-center justify-between text-black border-b border-b-background py-8 group"
+        class="group flex items-center justify-between border-b border-b-background py-8 text-black"
       >
         <div>
-          <p class="font-clash-display font-medium text-5xl">
+          <p class="font-clash-display text-5xl font-medium">
             {{ item.label }}
           </p>
-          <p
-            class="font-aeonik text-sm w-2/3 opacity-0 group-hover:opacity-100 transition-all"
-          >
+          <p class="w-2/3 font-aeonik text-sm opacity-0 transition-all group-hover:opacity-100">
             {{ item.desc }}
           </p>
         </div>
         <img
           :src="LineArrow"
           alt="Arrow"
-          class="size-10 mr-6 group-hover:rotate-12 transition-all"
+          class="mr-6 size-10 transition-all group-hover:rotate-12"
         />
       </div>
     </div>

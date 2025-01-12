@@ -1,3 +1,3 @@
 <template>
-  <a class="text-primary font-clash-display">Furniture world </a>
+  <a class="font-clash-display text-primary">Furniture world </a>
 </template>

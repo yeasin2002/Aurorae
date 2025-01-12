@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ArrowRight } from "lucide-vue-next";
-import SectionHeader from "./SectionHeader.vue";
-import { projectShowcase } from "~/data";
+import { ArrowRight } from 'lucide-vue-next'
+import SectionHeader from './SectionHeader.vue'
+import { projectShowcase } from '~/data'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import { projectShowcase } from "~/data";
       <div
         v-for="(item, index) in projectShowcase"
         :key="item.label"
-        class="grid grid-cols-12 my-4 text-black mx-2"
+        class="mx-2 my-4 grid grid-cols-12 text-black"
       >
         <img
           :src="item.img"
@@ -24,12 +24,12 @@ import { projectShowcase } from "~/data";
           class="col-span-8 rounded-md"
           :class="{ 'order-last': index % 2 === 0 }"
         />
-        <div class="flex flex-col justify-around col-span-4 mx-8">
+        <div class="col-span-4 mx-8 flex flex-col justify-around">
           <div>
             <h5 class="font-clash-display text-3xl font-medium">
               {{ item.label }}
             </h5>
-            <p class="font-aeonik text-lg mt-2">{{ item.dec }}</p>
+            <p class="mt-2 font-aeonik text-lg">{{ item.dec }}</p>
           </div>
 
           <a :href="item.link" class="flex gap-x-3 text-xl">
