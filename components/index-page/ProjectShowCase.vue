@@ -12,19 +12,19 @@ import { projectShowcase } from '~/data'
       desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleasing place to live. Pleasing environment for the people using the space."
     />
 
-    <div>
+    <div  class="space-y-14 md:space-y-4 px-4 md:mx-2">
       <div
         v-for="(item, index) in projectShowcase"
         :key="item.label"
-        class="mx-2 my-4 grid grid-cols-12 text-black"
+        class=" grid grid-cols-1 text-black md:grid-cols-12 gap-y-3 group"
       >
         <img
           :src="item.img"
           :alt="`img of ${item.label}`"
           class="col-span-8 rounded-md"
-          :class="{ 'order-last': index % 2 === 0 }"
+          :class="{ 'md:order-last': index % 2 === 0 }"
         />
-        <div class="col-span-4 mx-8 flex flex-col justify-around">
+        <div class="md:mx-8 flex flex-col justify-around col-span-4 gap-y-4">
           <div>
             <h5 class="font-clash-display text-3xl font-medium">
               {{ item.label }}
@@ -34,7 +34,7 @@ import { projectShowcase } from '~/data'
 
           <a :href="item.link" class="flex gap-x-3 text-xl">
             View project
-            <span class="into-center rounded-full border border-black p-1">
+            <span class="into-center rounded-full border border-black p-1 group-hover:translate-x-2 transition-all">
               <ArrowRight class="text-black" />
             </span>
           </a>

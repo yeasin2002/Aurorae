@@ -13,24 +13,24 @@ import LineArrow from '~/assets/icons/line-arrow.svg'
     />
 
     <!-- server list -->
-    <div class="bg-primary px-10 pb-8 pt-14">
+    <div class="bg-primary px-2 pt-6 lg:px-10 lg:pb-8 lg:pt-14">
       <div
         v-for="item in serviceData"
         :key="item.label"
-        class="group flex items-center justify-between border-b border-b-background py-8 text-black"
+        class="group flex items-center justify-between border-b border-b-background text-black  lg:py-8"
       >
-        <div>
-          <p class="font-clash-display text-5xl font-medium">
+        <div class="py-8 space-y-3 md:py-0 md:space-y-0">
+          <h4 class="font-clash-display text-5xl font-medium text-nowrap">
             {{ item.label }}
-          </p>
-          <p class="w-2/3 font-aeonik text-sm opacity-0 transition-all group-hover:opacity-100">
+          </h4>
+          <p class="md:w-2/3 w-full font-aeonik text-sm md:opacity-0 transition-all group-hover:opacity-100 opacity-90 ">
             {{ item.desc }}
           </p>
         </div>
         <img
           :src="LineArrow"
           alt="Arrow"
-          class="mr-6 size-10 transition-all group-hover:rotate-12"
+          class="mr-6 hidden size-10 transition-all group-hover:rotate-12 md:block"
         />
       </div>
     </div>

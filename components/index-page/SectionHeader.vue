@@ -10,7 +10,7 @@ const props = defineProps<Props>()
 
 <template>
   <div
-    class="grid grid-cols-1 items-start gap-x-5 bg-white px-10 pb-10 pt-24 text-background md:grid-cols-2"
+    class="grid grid-cols-1 items-start gap-x-5 bg-white px-4 md:px-10 pb-10 pt-24 text-background md:grid-cols-2"
   >
     <h3 class="font-clash-display text-3xl md:text-5xl">
       {{ props.heading1 }} <br />

@@ -5,11 +5,11 @@ import Logo from '~/components/common/LogoFull.vue'
 
 <template>
   <footer class="py-10">
-    <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 md:grid-cols-2">
       <h6 class="font-clash-display text-6xl">
         <span>Let’s Work</span>
         <br />
-        <span class="ml-20">Together</span>
+        <span class="ml-16 sm:ml-20">Together</span>
       </h6>
       <div class="space-y-4">
         <p class="w-4/5 font-aeonik">
@@ -21,7 +21,7 @@ import Logo from '~/components/common/LogoFull.vue'
     </div>
 
     <!-- bottom contact area -->
-    <div class="grid grid-cols-12 pt-16 pb-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 pb-6 pt-16 gap-y-4 md:gap-y-0">
       <div class="col-span-2">
         <Logo />
         <div class="mt-5 flex items-center gap-x-2">
@@ -36,10 +36,14 @@ import Logo from '~/components/common/LogoFull.vue'
         </div>
       </div>
 
-      <div class="col-span-10 grid grid-cols-3">
+      <div class="col-span-10 grid grid-cols-1 md:grid-cols-3 gap-y-4">
         <div v-for="item in footerData" :key="item.label">
           <h6 class="font-clash-display text-3xl font-medium">{{ item.label }}</h6>
-          <div v-for="(data, index) in item.menu" :key="index" class="mt-2 font-aeonik text-sm text-gray-300">
+          <div
+            v-for="(data, index) in item.menu"
+            :key="index"
+            class="mt-2 font-aeonik text-sm text-gray-300"
+          >
             <span v-if="typeof data === 'string'">
               {{ data }}
             </span>
