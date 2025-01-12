@@ -1,23 +1,16 @@
 <script lang="ts" setup>
 import { serviceData } from '@/data'
+import SectionHeader from './SectionHeader.vue'
 import LineArrow from '@/assets/icons/line-arrow.svg'
 </script>
 
 <template>
   <div>
-    <div
-      class="bg-white grid grid-cols-1 md:grid-cols-2 gap-x-5 text-background items-center px-10 pb-10 pt-24"
-    >
-      <h3 class="font-clash-display text-3xl md:text-5xl">
-        What we can do <br />
-        for your home
-      </h3>
-      <p class="font-aeonik mt-4 md:mt-0">
-        We always provide the best for our clients in any case so that all their wishes can be
-        realized and have a decent, comfortable and aesthetically pleassing place to live. Pleasing
-        environment for the people using the space.
-      </p>
-    </div>
+    <SectionHeader
+      heading1="What we can do"
+      heading2="for your home"
+      desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleassing place to live. Pleasing environment for the people using the space."
+    />
 
     <!-- server list -->
     <div class="bg-primary pb-8 pt-14 px-10">
@@ -32,7 +25,11 @@ import LineArrow from '@/assets/icons/line-arrow.svg'
             {{ item.desc }}
           </p>
         </div>
-        <img :src="LineArrow" alt="Arrow" class="size-10 mr-6 group-hover:rotate-12 transition-all" />
+        <img
+          :src="LineArrow"
+          alt="Arrow"
+          class="size-10 mr-6 group-hover:rotate-12 transition-all"
+        />
       </div>
     </div>
   </div>

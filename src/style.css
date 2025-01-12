@@ -18,4 +18,7 @@
   .btn-secondary {
     @apply bg-background border border-white text-white;
   }
+  .into-center {
+    @apply flex items-center justify-center 
+  }
 }
