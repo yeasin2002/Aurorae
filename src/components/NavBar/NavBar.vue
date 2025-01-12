@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { navigation } from '@/data'
 import MobileNav from './MobileNav.vue'
+import Logo from '../LogoFull.vue'
 </script>
 
 <template>
   <div class="pt-6">
     <nav class="flex items-center justify-between gap-x-3">
-      <a class="text-primary font-clash-display">Furniture world </a>
+      <Logo />
       <div class="space-x-4 hidden lg:block">
         <a
           v-for="item in navigation"
