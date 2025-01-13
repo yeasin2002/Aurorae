@@ -26,9 +26,9 @@ import { projectShowcase } from '~/data'
         />
         <div class="col-span-5 flex flex-col justify-around gap-y-4 lg:mx-8 xl:col-span-4">
           <div>
-            <h5 class="font-clash-display text-3xl font-medium">
+            <h4 class="font-clash-display text-3xl font-medium">
               {{ item.label }}
-            </h5>
+            </h4>
             <p class="mt-2 font-aeonik text-base xl:text-lg">{{ item.dec }}</p>
           </div>
 

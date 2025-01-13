@@ -21,7 +21,7 @@ import Logo from '~/components/common/LogoFull.vue'
     </div>
 
     <!-- bottom contact area -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 pb-6 pt-16 gap-y-4 md:gap-y-8 xl:gap-y-0">
+    <div class="grid grid-cols-1 gap-y-4 pb-6 pt-16 md:gap-y-8 lg:grid-cols-12 xl:gap-y-0">
       <div class="col-span-2">
         <Logo />
         <div class="mt-5 flex items-center gap-x-2">
@@ -32,11 +32,12 @@ import Logo from '~/components/common/LogoFull.vue'
             class="flex items-center justify-center rounded-full bg-white p-1"
           >
             <component :is="icon.icon" class="size-4 text-black" />
+            <span class="sr-only"> Contact via  {{ icon.label }} </span>
           </a>
         </div>
       </div>
 
-      <div class="col-span-10 grid grid-cols-1 md:grid-cols-3 gap-y-4 ">
+      <div class="col-span-10 grid grid-cols-1 gap-y-4 md:grid-cols-3">
         <div v-for="item in footerData" :key="item.label">
           <h6 class="font-clash-display text-3xl font-medium">{{ item.label }}</h6>
           <div
