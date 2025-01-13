@@ -16,6 +16,7 @@
     "@nuxtjs/robots": "^5.1.0",
     "@nuxtjs/seo": "^2.0.2",
     "@nuxtjs/tailwindcss": "6.12.2",
+    "class-variance-authority": "^0.7.1",
     "lucide-vue-next": "^0.471.0",
     "nuxt": "^3.15.1",
     "nuxt-og-image": "^4.0.2",
