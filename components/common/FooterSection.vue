@@ -6,11 +6,11 @@ import Logo from '~/components/common/LogoFull.vue'
 <template>
   <footer class="py-10">
     <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 xl:grid-cols-2">
-      <h6 class="font-clash-display text-6xl">
+      <h3 class="font-clash-display text-6xl">
         <span>Let’s Work</span>
         <br />
         <span class="ml-16 sm:ml-20">Together</span>
-      </h6>
+      </h3>
       <div class="space-y-4">
         <p class="w-4/5 font-aeonik">
           Interior design is the art of science of enhancing the interior of a building to achieve a
@@ -39,7 +39,7 @@ import Logo from '~/components/common/LogoFull.vue'
 
       <div class="col-span-10 grid grid-cols-1 gap-y-4 md:grid-cols-3">
         <div v-for="item in footerData" :key="item.label">
-          <h6 class="font-clash-display text-3xl font-medium">{{ item.label }}</h6>
+          <h4 class="font-clash-display text-3xl font-medium">{{ item.label }}</h4>
           <div
             v-for="(data, index) in item.menu"
             :key="index"

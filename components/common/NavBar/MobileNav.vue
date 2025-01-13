@@ -15,6 +15,7 @@ import {
     <Sheet>
       <SheetTrigger>
         <AlignJustify />
+        <span class="sr-only">Menu</span>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>

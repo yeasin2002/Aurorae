@@ -10,9 +10,7 @@ useSeoMeta({
   ogTitle: 'Furniture World',
   ogDescription: 'Interior design, building  pleasing environment',
   ogImage: '/cover.png',
-
-  description:
-    'Interior design is the art of science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space.',
+  description: 'Interior design is the art of science of enhancing the interior of a building.',
 })
 </script>
 
