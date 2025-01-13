@@ -9,14 +9,14 @@ import Logo from '~/components/common/LogoFull.vue'
     <nav class="flex items-center justify-between gap-x-3">
       <Logo />
       <div class="hidden space-x-4 lg:block">
-        <a
+        <NuxtLink
           v-for="item in navigation"
           :key="item.name"
           :href="item.href"
           class="font-aeonik font-medium"
         >
           {{ item.name }}
-        </a>
+        </NuxtLink>
       </div>
       <button class="btn btn-secondary hidden font-aeonik lg:block">Get Started</button>
       <MobileNav />

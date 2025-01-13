@@ -7,7 +7,7 @@ import Footer from '~/components/common/FooterSection.vue'
 
 useSeoMeta({
   title: 'Furniture World',
-  ogTitle: 'My Amazing Site',
+  ogTitle: 'Furniture World',
   ogDescription: 'Interior design, building  pleasing environment',
   ogImage: '/cover.png',
 
@@ -17,7 +17,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div >
+  <div class="container px-2 md:px-4 2xl:px-0">
     <NavBar />
     <Hero />
     <Service />
