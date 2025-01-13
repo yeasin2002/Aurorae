@@ -53,5 +53,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/robots',
     '@nuxt/image',
+    '@nuxt/fonts',
+    '@nuxtjs/eslint-module',
   ],
 })
