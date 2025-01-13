@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { ArrowRight } from 'lucide-vue-next'
 import { wordStatistics } from '~/data'
-// import heroImg1 from '~/assets/images/hero2.png'
-// import heroImg2 from '~/assets/images/hero1.png'
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -15,7 +14,7 @@ import { wordStatistics } from '~/data'
         <br />
         Very Easily
       </h1>
-      <button class="btn btn-default my-4 font-clash-display font-bold">Get Started</button>
+      <Button class="my-4 rounded-3xl font-clash-display font-bold">Get Started</Button>
 
       <div class="hidden items-center gap-x-1 md:flex">
         <NuxtImg
@@ -53,11 +52,7 @@ import { wordStatistics } from '~/data'
           <p class="text-xs text-[#AEAEAE]">{{ item.label }}</p>
         </div>
       </div>
-      <NuxtImg
-        src="/assets/images/hero1.png"
-        alt="Product Image"
-        class="mt-8 w-full rounded-sm"
-      />
+      <NuxtImg src="/assets/images/hero1.png" alt="Product Image" class="mt-8 w-full rounded-sm" />
     </div>
   </div>
 </template>

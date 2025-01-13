@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { footerData, footerSocial } from '~/data'
 import Logo from '~/components/common/LogoFull.vue'
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import Logo from '~/components/common/LogoFull.vue'
           Interior design is the art of science of enhancing the interior of a building to achieve a
           healthier and more aesthetically pleasing environment for the people using the space.
         </p>
-        <button class="btn btn-default px-8 font-aeonik font-bold">Contact Now</button>
+        <Button class="rounded-3xl px-8 font-aeonik font-bold">Contact Now</Button>
       </div>
     </div>
 

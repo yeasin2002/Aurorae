@@ -2,6 +2,7 @@
 import { navigation } from '~/data'
 import MobileNav from './MobileNav.vue'
 import Logo from '~/components/common/LogoFull.vue'
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -18,7 +19,9 @@ import Logo from '~/components/common/LogoFull.vue'
           {{ item.name }}
         </NuxtLink>
       </div>
-      <button class="btn btn-secondary hidden font-aeonik lg:block">Get Started</button>
+      <Button class="hidden rounded-3xl font-aeonik lg:block" variant="secondary"
+        >Get Started</Button
+      >
       <MobileNav />
     </nav>
     <div class="my-4 h-[0.10rem] w-full bg-gray-400"></div>

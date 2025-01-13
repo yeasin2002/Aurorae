@@ -2,5 +2,8 @@
     "files.associations": {
         "*.css": "tailwindcss",
         "*.vue": "vue"
-    }
+    },
+    "cSpell.words": [
+        "Nuxt"
+    ]
 }

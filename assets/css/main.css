@@ -2,20 +2,11 @@
 
 @layer base {
   body {
-    @apply  mx-auto bg-background  text-white ;
+    @apply mx-auto bg-background text-white;
   }
 }
 
 @layer components {
-  .btn {
-    @apply inline-flex h-10 items-center justify-center whitespace-nowrap rounded-3xl px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
-  }
-  .btn-default {
-    @apply bg-primary text-background;
-  }
-  .btn-secondary {
-    @apply border border-white bg-background text-white;
-  }
   .into-center {
     @apply flex items-center justify-center;
   }
