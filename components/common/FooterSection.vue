@@ -5,7 +5,7 @@ import Logo from '~/components/common/LogoFull.vue'
 
 <template>
   <footer class="py-10">
-    <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 xl:grid-cols-2">
       <h6 class="font-clash-display text-6xl">
         <span>Let’s Work</span>
         <br />
@@ -21,7 +21,7 @@ import Logo from '~/components/common/LogoFull.vue'
     </div>
 
     <!-- bottom contact area -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 pb-6 pt-16 gap-y-4 md:gap-y-0">
+    <div class="grid grid-cols-1 lg:grid-cols-12 pb-6 pt-16 gap-y-4 md:gap-y-8 xl:gap-y-0">
       <div class="col-span-2">
         <Logo />
         <div class="mt-5 flex items-center gap-x-2">
@@ -36,7 +36,7 @@ import Logo from '~/components/common/LogoFull.vue'
         </div>
       </div>
 
-      <div class="col-span-10 grid grid-cols-1 md:grid-cols-3 gap-y-4">
+      <div class="col-span-10 grid grid-cols-1 md:grid-cols-3 gap-y-4 ">
         <div v-for="item in footerData" :key="item.label">
           <h6 class="font-clash-display text-3xl font-medium">{{ item.label }}</h6>
           <div

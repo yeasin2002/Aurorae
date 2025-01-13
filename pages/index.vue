@@ -17,7 +17,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div >
     <NavBar />
     <Hero />
     <Service />

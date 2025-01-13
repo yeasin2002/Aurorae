@@ -12,30 +12,32 @@ import { projectShowcase } from '~/data'
       desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleasing place to live. Pleasing environment for the people using the space."
     />
 
-    <div  class="space-y-14 md:space-y-4 px-4 md:mx-2">
+    <div class="space-y-14 px-4 lg:mx-2 lg:space-y-4 lg:px-0">
       <div
         v-for="(item, index) in projectShowcase"
         :key="item.label"
-        class=" grid grid-cols-1 text-black md:grid-cols-12 gap-y-3 group"
+        class="group grid grid-cols-1 gap-y-3 text-black lg:grid-cols-12"
       >
         <img
           :src="item.img"
           :alt="`img of ${item.label}`"
-          class="col-span-8 rounded-md"
-          :class="{ 'md:order-last': index % 2 === 0 }"
+          :class="{ 'lg:order-last': index % 2 === 0 }"
+          class="col-span-7 rounded-md xl:col-span-8"
         />
-        <div class="md:mx-8 flex flex-col justify-around col-span-4 gap-y-4">
+        <div class="col-span-5 flex flex-col justify-around gap-y-4 lg:mx-8 xl:col-span-4">
           <div>
             <h5 class="font-clash-display text-3xl font-medium">
               {{ item.label }}
             </h5>
-            <p class="mt-2 font-aeonik text-lg">{{ item.dec }}</p>
+            <p class="mt-2 font-aeonik text-base xl:text-lg">{{ item.dec }}</p>
           </div>
 
-          <a :href="item.link" class="flex gap-x-3 text-xl">
-            View project
-            <span class="into-center rounded-full border border-black p-1 group-hover:translate-x-2 transition-all">
-              <ArrowRight class="text-black" />
+          <a :href="item.link" class="flex gap-x-3 lg:text-lg xl:text-xl">
+            <span>View project</span>
+            <span
+              class="into-center rounded-full border border-black p-1 transition-all group-hover:translate-x-2 "
+            >
+              <ArrowRight />
             </span>
           </a>
         </div>
