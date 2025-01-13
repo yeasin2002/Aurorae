@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { serviceData } from '~/data'
 import SectionHeader from './SectionHeader.vue'
-import LineArrow from '~/assets/icons/line-arrow.svg'
+// import LineArrow from '~/assets/icons/line-arrow.svg'
 </script>
 
 <template>
@@ -27,8 +27,8 @@ import LineArrow from '~/assets/icons/line-arrow.svg'
             {{ item.desc }}
           </p>
         </div>
-        <img
-          :src="LineArrow"
+        <NuxtImg
+          src="/assets/icons/line-arrow.svg"
           alt="Arrow"
           class="mr-6 hidden size-10 transition-all group-hover:rotate-12 md:block"
         />

@@ -18,7 +18,7 @@ import { projectShowcase } from '~/data'
         :key="item.label"
         class="group grid grid-cols-1 gap-y-3 text-black lg:grid-cols-12"
       >
-        <img
+        <NuxtImg
           :src="item.img"
           :alt="`img of ${item.label}`"
           :class="{ 'lg:order-last': index % 2 === 0 }"
@@ -35,7 +35,7 @@ import { projectShowcase } from '~/data'
           <a :href="item.link" class="flex gap-x-3 lg:text-lg xl:text-xl">
             <span>View project</span>
             <span
-              class="into-center rounded-full border border-black p-1 transition-all group-hover:translate-x-2 "
+              class="into-center rounded-full border border-black p-1 transition-all group-hover:translate-x-2"
             >
               <ArrowRight />
             </span>

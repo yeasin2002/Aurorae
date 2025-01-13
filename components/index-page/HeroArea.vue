@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { ArrowRight } from 'lucide-vue-next'
 import { wordStatistics } from '~/data'
-import heroImg1 from '~/assets/images/hero2.png'
-import heroImg2 from '~/assets/images/hero1.png'
+// import heroImg1 from '~/assets/images/hero2.png'
+// import heroImg2 from '~/assets/images/hero1.png'
 </script>
 
 <template>
@@ -18,9 +18,18 @@ import heroImg2 from '~/assets/images/hero1.png'
       <button class="btn btn-default my-4 font-clash-display font-bold">Get Started</button>
 
       <div class="hidden items-center gap-x-1 md:flex">
-        <img :src="heroImg1" alt="Product Image" class="mt-8 rounded-sm xl:w-[80%] 2xl:w-full"   />
-        <div id="scroll  direction" class="hidden w-full items-center justify-center gap-x-2 gap-y-2 xl:flex">
-          <span class="into-center rotate-90 rounded-full border border-primary p-2 text-primary transition-all group-hover:translate-x-2">
+        <NuxtImg
+          src="/assets/images/hero2.png"
+          alt="Product Image"
+          class="mt-8 rounded-sm xl:w-[80%] 2xl:w-full"
+        />
+        <div
+          id="scroll  direction"
+          class="hidden w-full items-center justify-center gap-x-2 gap-y-2 xl:flex"
+        >
+          <span
+            class="into-center rotate-90 rounded-full border border-primary p-2 text-primary transition-all group-hover:translate-x-2"
+          >
             <ArrowRight />
           </span>
 
@@ -44,7 +53,11 @@ import heroImg2 from '~/assets/images/hero1.png'
           <p class="text-xs text-[#AEAEAE]">{{ item.label }}</p>
         </div>
       </div>
-      <img :src="heroImg2" alt="Product Image" class="mt-8 w-full rounded-sm" />
+      <NuxtImg
+        src="/assets/images/hero1.png"
+        alt="Product Image"
+        class="mt-8 w-full rounded-sm"
+      />
     </div>
   </div>
 </template>

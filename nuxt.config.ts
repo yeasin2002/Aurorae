@@ -40,5 +40,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', 'nuxt-og-image', '@nuxtjs/seo', '@nuxtjs/robots'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    'nuxt-og-image',
+    '@nuxtjs/seo',
+    '@nuxtjs/robots',
+    '@nuxt/image',
+  ],
 })
