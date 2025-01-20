@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <footer class="py-10">
+  <footer class="py-10 container">
     <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 xl:grid-cols-2">
       <h3 class="font-clash-display text-6xl">
         <span>Let’s Work</span>
