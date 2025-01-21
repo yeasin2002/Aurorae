@@ -14,13 +14,13 @@
     "@nuxt/fonts": "0.10.3",
     "@nuxt/image": "1.9.0",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/robots": "^5.1.0",
-    "@nuxtjs/seo": "^2.0.2",
-    "@nuxtjs/tailwindcss": "6.13.0",
+    "@nuxtjs/robots": "^5.2.2",
+    "@nuxtjs/seo": "^2.1.0",
+    "@nuxtjs/tailwindcss": "6.13.1",
     "class-variance-authority": "^0.7.1",
-    "lucide-vue-next": "^0.471.0",
-    "nuxt": "^3.15.1",
-    "nuxt-og-image": "^4.0.2",
+    "lucide-vue-next": "0.473.0",
+    "nuxt": "^3.15.2",
+    "nuxt-og-image": "^4.1.2",
     "radix-vue": "^1.9.12",
     "shadcn-nuxt": "0.11.3",
     "tailwind-merge": "^2.6.0",
@@ -31,9 +31,9 @@
   "devDependencies": {
     "@nuxtjs/eslint-module": "^4.1.0",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prettier-plugin-tailwindcss": "^0.6.10",
     "tailwindcss": "^3.4.17"
   }
 }
