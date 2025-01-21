@@ -54,5 +54,6 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxt/image',
     '@nuxt/fonts',
+    '@nuxt/icon',
   ],
 })
