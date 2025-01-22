@@ -1,68 +1,11 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 import { Star, Check, MapPin } from 'lucide-vue-next'
+import { hotel } from '~/data/hotels.data'
 
-interface Review {
-  id: number
-  name: string
-  avatar: string
-  rating: number
-  comment: string
-}
-
-interface Hotel {
-  id: string
-  name: string
-  description: string
-  price: number
-  rating: number
-  reviews: number
-  reviewsDetails: Review[]
-  location: string
-  amenities: string[]
-  image: string
-}
-
-// Mock data for the hotel
-const hotel = ref<Hotel>({
-  id: '1',
-  name: 'Luxury Ocean View Resort',
-  description:
-    'Experience unparalleled luxury at our oceanfront resort. Nestled on pristine beaches with breathtaking views, our resort offers world-class amenities, exquisite dining, and personalized service to ensure an unforgettable stay.',
-  price: 499,
-  rating: 4.8,
-  reviews: 382,
-  reviewsDetails: [
-    {
-      id: 1,
-      name: 'John Doe',
-      avatar: '/placeholder.svg?height=40&width=40',
-      rating: 5,
-      comment:
-        'Absolutely stunning resort with impeccable service. The ocean view from our room was breathtaking!',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      avatar: '/placeholder.svg?height=40&width=40',
-      rating: 4,
-      comment:
-        'Great amenities and beautiful location. The staff was very friendly and accommodating.',
-    },
-  ],
-  location: 'Malibu, California',
-  amenities: [
-    'Free WiFi',
-    'Ocean View',
-    'Spa',
-    'Fitness Center',
-    'Restaurant',
-    '24/7 Room Service',
-    'Swimming Pool',
-    'Beach Access',
-  ],
-  image: `https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
-})
+const route = useRoute()
+const id = route.params.id
+console.log('🚀 ~ hotel id: ', id)
 
 const bookHotel = () => {
   console.log('Booking submitted')
