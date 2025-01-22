@@ -20,8 +20,6 @@ module.exports = {
         aeonik: ['aeonik', 'sans-serif'],
       },
       colors: {
-        // background: "#1B1D20",
-        // primary: "#FFD400",
         background: 'hsl(var(--background))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',

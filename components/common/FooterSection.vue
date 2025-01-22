@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <footer class="py-10 container">
+  <footer class="container py-10">
     <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 xl:grid-cols-2">
       <h3 class="font-clash-display text-6xl">
         <span>Let’s Work</span>
@@ -31,9 +31,10 @@ import { Button } from '@/components/ui/button'
             :key="icon.label"
             :href="icon.label"
             class="flex items-center justify-center rounded-full bg-white p-1"
+            target="_blank"
           >
             <component :is="icon.icon" class="size-4 text-black" />
-            <span class="sr-only"> Contact via  {{ icon.label }} </span>
+            <span class="sr-only"> Contact via {{ icon.label }} </span>
           </a>
         </div>
       </div>

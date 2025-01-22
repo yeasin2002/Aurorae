@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
           {{ item.name }}
         </NuxtLink>
       </div>
-      <Button class="hidden rounded-3xl font-aeonik lg:block" variant="secondary"
+      <Button to="/login" class="hidden rounded-3xl font-aeonik lg:block" variant="secondary"
         >Get Started</Button
       >
       <MobileNav />

@@ -22,18 +22,18 @@ export const footerData = [
 export const footerSocial = [
   {
     label: 'Facebook',
-    link: '#',
+    link: 'https://www.facebook.com/yeasin2002.dev',
     icon: Facebook,
   },
   {
     label: 'Twitter',
-    link: '#',
+    link: 'https://x.com/yeasin2002_dev',
     icon: Twitter,
   },
 
   {
     label: 'Instagram',
-    link: '#',
+    link: 'https://www.instagram.com/mdkawsarislam2002/',
     icon: Instagram,
   },
 ]
