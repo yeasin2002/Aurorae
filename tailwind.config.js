@@ -5,6 +5,7 @@ module.exports = {
   darkMode: ['class'],
   safelist: ['dark'],
   prefix: '',
+  content: ['./src/**/*.{js,ts,jsx,tsx,vue}'],
 
   theme: {
     container: {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-import { navigation } from '@/data'
+import { Button } from '~/components/ui/button'
+import { navigation } from '~/data'
 import { AlignJustify } from 'lucide-vue-next'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '~/components/ui/sheet'
 </script>
 
 <template>

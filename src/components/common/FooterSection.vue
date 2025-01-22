@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { footerData, footerSocial } from '~/data'
 import Logo from '~/components/common/LogoFull.vue'
-import { Button } from '@/components/ui/button'
+import { Button } from '~/components/ui/button'
 </script>
 
 <template>
