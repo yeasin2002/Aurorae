@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-12',
   devtools: { enabled: true },
   srcDir: 'src/',
-  // css: ['~/src/assets/css/main.css'],
   experimental: {
     typedPages: true,
   },

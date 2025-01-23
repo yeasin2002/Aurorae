@@ -20,7 +20,7 @@ import { Button } from '~/components/ui/button'
 
       <div class="hidden items-center gap-x-1 md:flex">
         <NuxtImg
-          src="~/assets/images/hero2.png"
+          src="/assets/images/hero2.png"
           alt="Product Image"
           class="mt-8 rounded-sm xl:w-[80%] 2xl:w-full"
         />

@@ -1,17 +1,5 @@
 @import './tailwind.css';
 
-@layer base {
-  body {
-    @apply mx-auto bg-background text-white;
-  }
-}
-
-@layer components {
-  .into-center {
-    @apply flex items-center justify-center;
-  }
-}
-
 @font-face {
   font-family: 'ClashDisplay';
   src:
