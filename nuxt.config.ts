@@ -2,11 +2,20 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-12',
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  srcDir: 'src/',
+  experimental: {
+    typedPages: true,
+  },
 
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
+      link: [
+        {
+          rel: 'stylesheet',
+          href: '/assets/css/main.css',
+        },
+      ],
     },
   },
 

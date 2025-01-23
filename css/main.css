@@ -1,0 +1,30 @@
+@import './tailwind.css';
+
+@font-face {
+  font-family: 'ClashDisplay';
+  src:
+    url('/fonts/ClashDisplay/ClashDisplay-Regular.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Bold.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Extralight.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Light.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Medium.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Semibold.woff') format('woff'),
+    url('/fonts/ClashDisplay/ClashDisplay-Variable.woff') format('woff');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'aeonik';
+  src:
+    url('/fonts/aeonik/AeonikTRIAL-Regular.otf') format('opentype'),
+    url('/fonts/aeonik/AeonikTRIAL-Bold.otf') format('opentype'),
+    url('/fonts/aeonik/AeonikTRIAL-BoldItalic.otf') format('opentype'),
+    url('/fonts/aeonik/AeonikTRIAL-Light.otf') format('opentype'),
+    url('/fonts/aeonik/AeonikTRIAL-LightItalic.otf') format('opentype'),
+    url('/fonts/aeonik/AeonikTRIAL-RegularItalic.otf') format('opentype');
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}

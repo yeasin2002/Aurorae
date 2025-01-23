@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Search, Star } from 'lucide-vue-next'
-import { hotels, amenities } from '@/data'
+import { hotels, amenities } from '~/data'
 </script>
 
 <template>

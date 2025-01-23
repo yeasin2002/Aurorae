@@ -2,7 +2,7 @@
 import { navigation } from '~/data'
 import MobileNav from './MobileNav.vue'
 import Logo from '~/components/common/LogoFull.vue'
-import { Button } from '@/components/ui/button'
+import { Button } from '~/components/ui/button'
 </script>
 
 <template>

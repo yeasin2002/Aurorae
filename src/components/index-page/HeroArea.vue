@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ArrowRight } from 'lucide-vue-next'
 import { wordStatistics } from '~/data'
-import { Button } from '@/components/ui/button'
+import { Button } from '~/components/ui/button'
 
 
 </script>
