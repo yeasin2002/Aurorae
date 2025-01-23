@@ -10,12 +10,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      link: [
-        {
-          rel: 'stylesheet',
-          href: '/assets/css/main.css',
-        },
-      ],
     },
   },
 

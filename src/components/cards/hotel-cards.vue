@@ -1,15 +1,21 @@
+<script>
+import { Star } from 'lucide-vue-next'
+</script>
+
 <template>
   <div class="group overflow-hidden rounded-lg bg-white/5">
     <div class="relative h-64">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1675745329378-5573c360f69f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="The Fairmont Orchid, Hawaii"
-        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
+      <NuxtLink to="/hotels/1">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1675745329378-5573c360f69f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="The Fairmont Orchid, Hawaii"
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </NuxtLink>
     </div>
     <div class="p-6">
       <div class="mb-2 flex items-start justify-between">
-        <h3 class="text-2xl font-bold">The Fairmont Orchid, Hawaii</h3>
+        <NuxtLink to="/hotels/1" class="text-2xl font-bold"> The Fairmont Orchid, Hawaii </NuxtLink>
         <div class="flex items-center gap-1 rounded bg-white/10 px-2 py-1">
           <Star class="h-4 w-4 fill-[#FFD700] text-[#FFD700]" />
           <span>4.9</span>
