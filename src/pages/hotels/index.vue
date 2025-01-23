@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { Search, Star } from 'lucide-vue-next'
-import { hotels, amenities } from '~/data'
+
+import Hotel from '@/components/cards/hotel-cards.vue'
+import CTA from './hotelList-CTA.vue'
+import { amenities } from '~/data'
 </script>
 
 <template>
@@ -97,71 +99,14 @@ import { hotels, amenities } from '~/data'
       </div>
     </section>
 
-    <!-- Hotel Listings -->
-    <section class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div
-          v-for="hotel in hotels"
-          :key="hotel.id"
-          class="group overflow-hidden rounded-lg bg-white/5"
-        >
-          <div class="relative h-64">
-            <img
-              src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              :alt="hotel.name"
-              class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-          <div class="p-6">
-            <div class="mb-2 flex items-start justify-between">
-              <h3 class="text-2xl font-bold">{{ hotel.name }}</h3>
-              <div class="flex items-center gap-1 rounded bg-white/10 px-2 py-1">
-                <Star class="h-4 w-4 fill-[#FFD700] text-[#FFD700]" />
-                <span>{{ hotel.rating.toFixed(1) }}</span>
-              </div>
-            </div>
-            <p class="mb-4 text-gray-400">{{ hotel.description }}</p>
-            <div class="mb-4 flex flex-wrap gap-2">
-              <span
-                v-for="amenity in hotel.amenities"
-                :key="amenity"
-                class="rounded bg-white/10 px-2 py-1 text-xs"
-              >
-                {{ amenity }}
-              </span>
-            </div>
-            <div class="flex items-center justify-between">
-              <div>
-                <span class="text-2xl font-bold text-[#FFD700]">${{ hotel.price }}</span>
-                <span class="text-gray-400">/night</span>
-              </div>
-              <button
-                class="rounded-md border border-[#FFD700] px-4 py-2 text-[#FFD700] transition-colors duration-300 hover:bg-[#FFD700] hover:text-black"
-              >
-                Book Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="grid grid-cols-1 gap-8 px-4 py-16 md:grid-cols-2 lg:grid-cols-3">
+      <Hotel />
+      <Hotel />
+      <Hotel />
+      <Hotel />
+      <Hotel />
     </section>
 
-    <!-- CTA Section -->
-    <section class="container mx-auto px-4 py-16">
-      <div class="rounded-lg bg-[#FFD700] p-8 md:p-12">
-        <div class="max-w-2xl">
-          <h2 class="mb-4 text-3xl font-bold text-black md:text-4xl">
-            Let's Find Your Dream Stay Together
-          </h2>
-          <p class="mb-8 text-black/80">
-            Our expert team is ready to help you find the perfect accommodation for your next
-            adventure.
-          </p>
-          <button class="rounded-md bg-black px-8 py-3 text-white hover:bg-black/90">
-            Contact Now
-          </button>
-        </div>
-      </div>
-    </section>
+    <CTA />
   </div>
 </template>
