@@ -29,12 +29,12 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://furniture-worlds.vercel.app',
-    name: 'furniture worlds',
+    name: 'auroraes',
   },
 
   seo: {
     meta: {
-      description: 'Furniture World',
+      description: 'aurorae',
       themeColor: [
         { content: '#18181b', media: '(prefers-color-scheme: dark)' },
         { content: 'white', media: '(prefers-color-scheme: light)' },
@@ -43,13 +43,13 @@ export default defineNuxtConfig({
       twitterSite: '@yeasin2002_dev',
       author: 'Md Kawsar Islam Yeasin',
       colorScheme: 'dark light',
-      applicationName: 'Furniture World',
+      applicationName: 'aurorae',
 
-      ogSiteName: 'Furniture World',
+      ogSiteName: 'aurorae',
       ogLocale: 'en_US',
       ogType: 'website',
       ogUrl: 'https://furniture-worlds.vercel.app/',
-      ogTitle: 'Furniture World',
+      ogTitle: 'aurorae',
 
       ogImage: '/cover.png',
       robots: 'index, follow',
