@@ -2,8 +2,6 @@
 import { ArrowRight } from 'lucide-vue-next'
 import { wordStatistics } from '~/data'
 import { Button } from '~/components/ui/button'
-
-
 </script>
 
 <template>
@@ -45,8 +43,8 @@ import { Button } from '~/components/ui/button'
 
     <div class="w-full xl:w-full">
       <h2>
-        Interior design is the art of science of enhancing the interior of a building to achieve a
-        healthier and more aesthetically pleasing environment for the people using the space.
+        Explore Unique Stays Around the World Designed to Match Your Style and Comfort From Luxury
+        Resorts to Budget-Friendly Options Find the Perfect Place for Your Next Adventure
       </h2>
       <div class="mt-4 flex items-center gap-x-10">
         <div v-for="item in wordStatistics" :key="item.label">
