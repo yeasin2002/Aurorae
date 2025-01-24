@@ -1,6 +1,5 @@
 <template>
   <NuxtLink href="/" class="flex items-center gap-x-1 font-clash-display text-primary">
-    <!-- <NuxtImg src="/brand/logo-large.svg" alt="Aurorae's Logo" class="size-5" /> -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -8,6 +7,7 @@
       width="500px"
       height="500px"
       fill-rule="nonzero"
+      aria-label="Aurorae's Logo"
       class="size-5"
     >
       <g

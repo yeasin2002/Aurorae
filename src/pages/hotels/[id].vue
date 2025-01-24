@@ -2,6 +2,16 @@
 import { useRoute } from 'vue-router'
 import { Star, Check, MapPin } from 'lucide-vue-next'
 import { amenities } from '~/data'
+import DatePicker from '~/components/ui/date-Picker.vue'
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 
 const route = useRoute()
 const id = (route.params as { id: string }).id || ''
@@ -10,6 +20,8 @@ console.log('🚀 ~ hotel id: ', id)
 const bookHotel = () => {
   console.log('Booking submitted')
 }
+
+const guests = Array.from({ length: 5 })
 </script>
 
 <template>
@@ -26,7 +38,7 @@ const bookHotel = () => {
           <h1 class="mb-4 font-clash-display text-4xl font-bold text-white md:text-6xl">
             Luxury Ocean View Resort
           </h1>
-          <div class="mb-2 flex items-center text-white gap-x-1">
+          <div class="mb-2 flex items-center gap-x-1 text-white">
             <Star />
             <span class="text-lg">4.8 (382 reviews)</span>
           </div>
@@ -88,7 +100,6 @@ const bookHotel = () => {
                     <svg class="h-4 w-4 fill-primary text-primary" viewBox="0 0 24 24">...</svg>
                   </div>
                 </div>
-
               </div>
               <p>Review comment here.</p>
             </div>
@@ -97,7 +108,7 @@ const bookHotel = () => {
         </div>
 
         <!-- Booking Section -->
-        <div class="lg:col-span-1">
+        <div class="text-background lg:col-span-1">
           <div class="sticky top-8 rounded-lg bg-primary bg-opacity-5 p-6">
             <h2 class="mb-4 font-clash-display text-3xl font-bold">
               $499 <span class="text-lg font-normal">/night</span>
@@ -105,27 +116,34 @@ const bookHotel = () => {
             <form class="space-y-4">
               <div>
                 <label for="check-in" class="mb-1 block text-sm font-medium">Check-in</label>
-                <input
-                  type="date"
-                  id="check-in"
-                  name="check-in"
-                  required
+                <DatePicker
                   class="w-full rounded-md border border-primary border-opacity-20 bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
                 <label for="check-out" class="mb-1 block text-sm font-medium">Check-out</label>
-                <input
-                  type="date"
-                  id="check-out"
-                  name="check-out"
-                  required
+                <DatePicker
                   class="w-full rounded-md border border-primary border-opacity-20 bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
               <div>
                 <label for="guests" class="mb-1 block text-sm font-medium">Guests</label>
-                <select
+                <Select>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a fruit" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Fruits</SelectLabel>
+
+                      <SelectItem v-for="(_, index) in guests" :key="index" :value="index.toString()">
+                        {{ index +1 }} Person
+                      </SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+
+                <!-- <select
                   id="guests"
                   name="guests"
                   required
@@ -135,7 +153,7 @@ const bookHotel = () => {
                   <option value="2">2 guests</option>
                   <option value="3">3 guests</option>
                   <option value="4">4 guests</option>
-                </select>
+                </select> -->
               </div>
               <button
                 type="submit"
