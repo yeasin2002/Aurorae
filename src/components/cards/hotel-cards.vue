@@ -1,7 +1,3 @@
-<script>
-import { Star } from 'lucide-vue-next'
-</script>
-
 <template>
   <div class="group overflow-hidden rounded-lg bg-white/5">
     <div class="relative h-64">
@@ -17,7 +13,7 @@ import { Star } from 'lucide-vue-next'
       <div class="mb-2 flex items-start justify-between">
         <NuxtLink to="/hotels/1" class="text-2xl font-bold"> The Fairmont Orchid, Hawaii </NuxtLink>
         <div class="flex items-center gap-1 rounded bg-white/10 px-2 py-1">
-          <Star class="h-4 w-4 fill-[#FFD700] text-[#FFD700]" />
+          <Icon name="mingcute:star-fill" />
           <span>4.9</span>
         </div>
       </div>

@@ -17,19 +17,20 @@ import SectionHeader from './SectionHeader.vue'
       <div
         v-for="item in serviceData"
         :key="item.label"
-        class="group flex items-center justify-between border-b border-b-background text-black  lg:py-8"
+        class="group flex items-center justify-between border-b border-b-background text-black lg:py-8"
       >
-        <div class="py-8 space-y-3 md:py-0 md:space-y-0">
-          <h4 class="font-clash-display text-5xl font-medium text-nowrap">
+        <div class="space-y-3 py-8 md:space-y-0 md:py-0">
+          <h4 class="text-nowrap font-clash-display text-5xl font-medium">
             {{ item.label }}
           </h4>
-          <p class="md:w-2/3 w-full font-aeonik text-sm md:opacity-0 transition-all group-hover:opacity-100 opacity-90 ">
+          <p
+            class="w-full font-aeonik text-sm opacity-90 transition-all group-hover:opacity-100 md:w-2/3 md:opacity-0"
+          >
             {{ item.desc }}
           </p>
         </div>
-        <NuxtImg
-          src="/assets/icons/line-arrow.svg"
-          alt="Arrow"
+        <Icon
+          name="local:line-arrow"
           class="mr-6 hidden size-10 transition-all group-hover:rotate-12 md:block"
         />
       </div>

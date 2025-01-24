@@ -3,28 +3,17 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-12',
   devtools: { enabled: true },
   srcDir: 'src/',
-  experimental: {
-    typedPages: true,
+  experimental: { typedPages: true },
+  app: { head: { htmlAttrs: { lang: 'en' } } },
+
+  postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
+  icon: {
+    provider: 'server',
+    mode: 'svg',
+    customCollections: [{ prefix: 'local', dir: './src/public/assets/svg' }],
   },
 
-  app: {
-    head: {
-      htmlAttrs: { lang: 'en' },
-    },
-  },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-
-  site: {
-    url: 'https://furniture-worlds.vercel.app',
-    name: 'auroraes',
-  },
-
+  site: { url: 'https://furniture-worlds.vercel.app', name: 'auroraes' },
   seo: {
     meta: {
       description: 'aurorae',
