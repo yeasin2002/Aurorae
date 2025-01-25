@@ -4,7 +4,6 @@ import Service from '~/components/index-page/OurService.vue'
 import Project from '~/components/index-page/ProjectShowCase.vue'
 
 useSeoMeta({
-  // title: 'aurorae',
   ogTitle: 'aurorae',
   ogDescription: 'Interior design, building  pleasing environment',
   ogImage: '/cover.png',

@@ -13,9 +13,4 @@ export const navigation = [
     name: 'About',
     href: '/about',
   },
-
-  {
-    name: 'Feature',
-    href: '/feature',
-  },
 ]

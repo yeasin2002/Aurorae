@@ -13,7 +13,7 @@ import { Button } from '~/components/ui/button'
         <NuxtLink
           v-for="item in navigation"
           :key="item.name"
-          :href="item.href"
+          :to="item.href"
           class="font-aeonik font-medium"
         >
           {{ item.name }}
