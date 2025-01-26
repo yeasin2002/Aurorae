@@ -1,7 +1,25 @@
 <script lang="ts" setup>
 import { ArrowRight } from 'lucide-vue-next'
-import { wordStatistics } from '~/data'
 import { Button } from '~/components/ui/button'
+import CounterAnimation from '~/components/common/NumberCounter.vue'
+
+const wordStatistics = [
+  {
+    label: 'Client',
+    value: 400,
+    valuePostfix: '+',
+  },
+  {
+    label: 'Product',
+    value: 2.5,
+    valuePostfix: 'K+',
+  },
+  {
+    label: 'Year Experience',
+    value: 2.5,
+    valuePostfix: 'K+',
+  },
+]
 </script>
 
 <template>
@@ -48,7 +66,11 @@ import { Button } from '~/components/ui/button'
       </h2>
       <div class="mt-4 flex items-center gap-x-10">
         <div v-for="item in wordStatistics" :key="item.label">
-          <p class="text-2xl font-extrabold">{{ item.value }}</p>
+          <!-- <p class="text-2xl font-extrabold">{{ item.value }}{{ item.valuePostfix }}</p> -->
+          <p class="flex items-center gap-x-1">
+            <CounterAnimation :from="0" :to="item.value" :duration="2000" :decimals="2" /> 
+            <span>{{ item.valuePostfix }}</span>
+          </p>
           <p class="text-xs text-[#AEAEAE]">{{ item.label }}</p>
         </div>
       </div>
