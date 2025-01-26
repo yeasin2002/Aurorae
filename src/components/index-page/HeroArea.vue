@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '~/components/ui/button'
 import CounterAnimation from '~/components/common/NumberCounter.vue'
 
@@ -33,7 +32,6 @@ const wordStatistics = [
         Very Easily
       </h1>
       <Button class="my-4 rounded-3xl font-clash-display font-bold">Get Started</Button>
-
       <div class="hidden items-center gap-x-1 md:flex">
         <NuxtImg
           src="/assets/images/hero2.png"
@@ -47,7 +45,7 @@ const wordStatistics = [
           <span
             class="into-center rotate-90 rounded-full border border-primary p-2 text-primary transition-all group-hover:translate-x-2"
           >
-            <ArrowRight />
+            <Icon name="mingcute:arrow-right-line" />
           </span>
 
           <p class="text-xs">
@@ -68,7 +66,7 @@ const wordStatistics = [
         <div v-for="item in wordStatistics" :key="item.label">
           <!-- <p class="text-2xl font-extrabold">{{ item.value }}{{ item.valuePostfix }}</p> -->
           <p class="flex items-center gap-x-1">
-            <CounterAnimation :from="0" :to="item.value" :duration="2000" :decimals="2" /> 
+            <CounterAnimation :from="0" :to="item.value" :duration="2000" :decimals="2" />
             <span>{{ item.valuePostfix }}</span>
           </p>
           <p class="text-xs text-[#AEAEAE]">{{ item.label }}</p>

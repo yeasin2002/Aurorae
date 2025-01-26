@@ -33,7 +33,8 @@ import { Button } from '~/components/ui/button'
             class="flex items-center justify-center rounded-full bg-white p-1"
             target="_blank"
           >
-            <component :is="icon.icon" class="size-4 text-black" />
+            <!-- <component :is="icon.icon" class="size-4 text-black" /> -->
+            <Icon :name="icon.icon" class="size-4 text-black" />
             <span class="sr-only"> Contact via {{ icon.label }} </span>
           </a>
         </div>

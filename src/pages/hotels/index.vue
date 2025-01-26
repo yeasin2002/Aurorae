@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Search, Star } from 'lucide-vue-next'
-
 import Hotel from '@/components/cards/hotel-cards.vue'
 import CTA from './hotelList-CTA.vue'
 import { amenities } from '~/data'
@@ -29,7 +27,7 @@ import { amenities } from '~/data'
             <button
               class="flex items-center rounded-md bg-[#FFD700] px-8 py-2 text-black hover:bg-[#FFD700]/90"
             >
-              <Search class="mr-2 h-5 w-5" />
+              <Icon name="lucide:search" class="mr-2 h-5 w-5" />
               Search
             </button>
           </div>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { Star, Check, MapPin } from 'lucide-vue-next'
 import { amenities } from '~/data'
 import DatePicker from '~/components/ui/date-Picker.vue'
 import {
@@ -39,11 +38,11 @@ const guests = Array.from({ length: 5 })
             Luxury Ocean View Resort
           </h1>
           <div class="mb-2 flex items-center gap-x-1 text-white">
-            <Star />
+            <Icon name="lucide:star" />
             <span class="text-lg">4.8 (382 reviews)</span>
           </div>
           <p class="flex items-center gap-x-1 text-xl text-white">
-            <MapPin /> <span>Malibu, California</span>
+            <Icon name="lucide:map-pin" /> <span>Malibu, California</span>
           </p>
         </div>
       </div>
@@ -67,7 +66,7 @@ const guests = Array.from({ length: 5 })
             <h2 class="mb-4 font-clash-display text-3xl font-bold">Amenities</h2>
             <ul class="grid grid-cols-2 gap-4">
               <li class="flex items-center gap-x-2" v-for="amenity in amenities" :key="amenity">
-                <Check class="size-4 text-green-600" />
+                <Icon name="lucide:check" class="size-4 text-green-600" />
                 <span> {{ amenity }} </span>
               </li>
             </ul>
@@ -136,8 +135,12 @@ const guests = Array.from({ length: 5 })
                     <SelectGroup>
                       <SelectLabel>Fruits</SelectLabel>
 
-                      <SelectItem v-for="(_, index) in guests" :key="index" :value="index.toString()">
-                        {{ index +1 }} Person
+                      <SelectItem
+                        v-for="(_, index) in guests"
+                        :key="index"
+                        :value="index.toString()"
+                      >
+                        {{ index + 1 }} Person
                       </SelectItem>
                     </SelectGroup>
                   </SelectContent>

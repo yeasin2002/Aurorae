@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { UserPlusIcon } from 'lucide-vue-next'
-</script>
-
 <template>
   <div class="flex min-h-screen items-center justify-center px-4">
     <div class="w-full max-w-md space-y-8">
@@ -93,7 +89,8 @@ import { UserPlusIcon } from 'lucide-vue-next'
             class="group relative flex w-full justify-center rounded-md border border-transparent bg-[#FFD700] px-4 py-2 text-sm font-medium text-black hover:bg-[#FFD700]/90 focus:outline-none focus:ring-2 focus:ring-[#FFD700] focus:ring-offset-2"
           >
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-              <UserPlusIcon
+              <Icon
+                name="lucide:user-plus"
                 class="h-5 w-5 text-[#1C1C1C] group-hover:text-[#1C1C1C]/70"
                 aria-hidden="true"
               />

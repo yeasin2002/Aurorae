@@ -5,7 +5,6 @@ import { Calendar } from '@/components/ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { DateFormatter, type DateValue, getLocalTimeZone } from '@internationalized/date'
-import { Calendar as CalendarIcon } from 'lucide-vue-next'
 import { ref } from 'vue'
 
 const df = new DateFormatter('en-US', {
@@ -32,7 +31,7 @@ const props = defineProps<{
           )
         "
       >
-        <CalendarIcon class="mr-2 h-4 w-4" />
+        <Icon name="lucide:calendar" class="mr-2 h-4 w-4" />
         {{ value ? df.format(value.toDate(getLocalTimeZone())) : 'Pick a date' }}
       </Button>
     </PopoverTrigger>

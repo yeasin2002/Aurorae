@@ -1,5 +1,3 @@
-import { Facebook, Instagram, Twitter } from 'lucide-vue-next'
-
 export const footerData = [
   {
     label: 'Address',
@@ -23,17 +21,17 @@ export const footerSocial = [
   {
     label: 'Facebook',
     link: 'https://www.facebook.com/yeasin2002.dev',
-    icon: Facebook,
+    icon: 'lucide:facebook',
   },
   {
     label: 'Twitter',
     link: 'https://x.com/yeasin2002_dev',
-    icon: Twitter,
+    icon: 'lucide:twitter',
   },
 
   {
     label: 'Instagram',
     link: 'https://www.instagram.com/mdkawsarislam2002/',
-    icon: Instagram,
+    icon: 'lucide:instagram',
   },
 ]

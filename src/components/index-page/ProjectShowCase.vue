@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ArrowRight } from 'lucide-vue-next'
 import SectionHeader from './SectionHeader.vue'
 import { projectShowcase } from '~/data'
 </script>
@@ -37,7 +36,7 @@ import { projectShowcase } from '~/data'
             <span
               class="into-center rounded-full border border-black p-1 transition-all group-hover:translate-x-2"
             >
-              <ArrowRight />
+              <Icon name="mingcute:arrow-right-line" />
             </span>
           </a>
         </div>
