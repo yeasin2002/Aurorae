@@ -1,4 +1,4 @@
 <template>
-
-    Hello form admin dashboard
+Hello
 </template>
+
