@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { FieldProps } from './interface'
-import { Checkbox } from '@/lib/registry/default/ui/checkbox'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/lib/registry/default/ui/form'
-import { Switch } from '@/lib/registry/default/ui/switch'
+import { Checkbox } from '@/components/ui/checkbox'
+import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { Switch } from '@/components/ui/switch'
 import { computed } from 'vue'
 import AutoFormLabel from './AutoFormLabel.vue'
+import type { FieldProps } from './interface'
 import { beautifyObjectName, maybeBooleanishToBoolean } from './utils'
 
 const props = defineProps<FieldProps>()

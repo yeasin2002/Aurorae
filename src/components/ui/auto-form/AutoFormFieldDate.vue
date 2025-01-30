@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { FieldProps } from './interface'
-import { Button } from '@/lib/registry/default/ui/button'
-import { Calendar } from '@/lib/registry/default/ui/calendar'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/lib/registry/default/ui/form'
-import { Popover, PopoverContent, PopoverTrigger } from '@/lib/registry/default/ui/popover'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
+import type { FieldProps } from './interface'
 
 import { DateFormatter, getLocalTimeZone } from '@internationalized/date'
 import { CalendarIcon } from 'lucide-vue-next'

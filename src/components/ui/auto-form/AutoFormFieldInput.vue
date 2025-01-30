@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { FieldProps } from './interface'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/lib/registry/default/ui/form'
-import { Input } from '@/lib/registry/default/ui/input'
-import { Textarea } from '@/lib/registry/default/ui/textarea'
+import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { computed } from 'vue'
 import AutoFormLabel from './AutoFormLabel.vue'
+import type { FieldProps } from './interface'
 import { beautifyObjectName } from './utils'
 
 const props = defineProps<FieldProps>()

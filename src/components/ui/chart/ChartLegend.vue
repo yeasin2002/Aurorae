@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { buttonVariants } from '@/components/ui/button'
 import type { BulletLegendItemInterface } from '@unovis/ts'
-import { buttonVariants } from '@/lib/registry/default/ui/button'
 import { BulletLegend } from '@unovis/ts'
 import { VisBulletLegend } from '@unovis/vue'
 import { nextTick, onMounted, ref } from 'vue'

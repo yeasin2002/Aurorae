@@ -1,4 +1,3 @@
 <template>
-Hello
+  <div>Dashboard</div>
 </template>
-
