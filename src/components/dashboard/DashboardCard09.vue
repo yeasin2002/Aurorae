@@ -25,12 +25,12 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import Tooltip from '../../components/Tooltip.vue'
-import BarChart from '../../charts/BarChart02.vue'
+import BarChart from '@/components/charts/BarChart02.vue';
+import Tooltip from '@/components/dashboard/components/Tooltip.vue';
+import { ref } from 'vue';
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils'
+import { tailwindConfig } from '../../utils/Utils';
 
 export default {
   name: 'DashboardCard09',

@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import DoughnutChart from '../../charts/DoughnutChart.vue'
+import DoughnutChart from '@/components/charts/DoughnutChart.vue';
+import { ref } from 'vue';
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils'
+import { tailwindConfig } from '../../utils/Utils';
 
 export default {
   name: 'DashboardCard06',

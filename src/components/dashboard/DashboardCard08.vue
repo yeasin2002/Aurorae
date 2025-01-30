@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import { chartAreaGradient } from '../../charts/ChartjsConfig'
-import LineChart from '../../charts/LineChart02.vue'
+import { chartAreaGradient } from '@/components/charts/ChartjsConfig';
+import LineChart from '@/components/charts/LineChart02.vue';
+import { ref } from 'vue';
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils'
+import { tailwindConfig } from '../../utils/Utils';
 
 export default {
   name: 'DashboardCard08',

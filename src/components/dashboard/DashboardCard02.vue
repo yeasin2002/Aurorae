@@ -42,13 +42,13 @@
 </template>
 
 <script>
+import { chartAreaGradient } from '@/components/charts/ChartjsConfig'
 import { ref } from 'vue'
-import { chartAreaGradient } from '../../charts/ChartjsConfig'
 import LineChart from '../../charts/LineChart01.vue'
 import EditMenu from '../../components/DropdownEditMenu.vue'
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from '../../utils/Utils'
+import { hexToRGB, tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard01',

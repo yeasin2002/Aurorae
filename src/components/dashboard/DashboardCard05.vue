@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import Tooltip from '../../components/Tooltip.vue'
-import { chartAreaGradient } from '../../charts/ChartjsConfig'
-import RealtimeChart from '../../charts/RealtimeChart.vue'
+import { chartAreaGradient } from '@/components/charts/ChartjsConfig'
+import RealtimeChart from '@/components/charts/RealtimeChart.vue'
+import Tooltip from '@/components/dashboard/components/Tooltip.vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from '../../utils/Utils'
+import { hexToRGB, tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard05',
