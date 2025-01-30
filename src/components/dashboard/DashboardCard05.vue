@@ -26,7 +26,7 @@ import Tooltip from '@/components/dashboard/components/Tooltip.vue'
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 
 // Import utilities
-import { hexToRGB, tailwindConfig } from '@/utils/Utils'
+import { hexToRGB, tailwindConfig } from '../../utils/Utils'
 
 export default {
   name: 'DashboardCard05',

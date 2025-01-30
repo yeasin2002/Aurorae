@@ -1,5 +1,5 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfigFile from '../../tailwind.config'
+import tailwindConfigFile from '@tailwindConfig'
 
 export const tailwindConfig = () => {
   return resolveConfig(tailwindConfigFile)
