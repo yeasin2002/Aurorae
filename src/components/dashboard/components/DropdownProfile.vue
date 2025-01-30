@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from 'vue'
-import UserAvatar from '../images/user-avatar-32.png'
+import UserAvatar from '@/assets/images/user-avatar-32.png';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 export default {
   name: 'DropdownProfile',

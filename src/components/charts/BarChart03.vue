@@ -11,23 +11,23 @@
 </template>
 
 <script>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useDark } from '@vueuse/core'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart,
-  BarController,
-  BarElement,
-  LinearScale,
-  CategoryScale,
-  Tooltip,
-  Legend,
+    BarController,
+    BarElement,
+    CategoryScale,
+    Chart,
+    Legend,
+    LinearScale,
+    Tooltip,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig } from '../utils/Utils'
+import { tailwindConfig } from '@/utils/Utils'
 
 Chart.register(BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend)
 

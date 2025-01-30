@@ -72,10 +72,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+                
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -197,11 +194,7 @@
                     ? ''
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
-                href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+                
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -486,10 +479,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+                
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -728,10 +718,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+   
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -858,10 +845,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -981,10 +965,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -1243,11 +1224,8 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
               >
+
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
                     <svg
@@ -1440,10 +1418,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -1614,10 +1589,7 @@
                 class="block truncate text-gray-800 transition dark:text-gray-100"
                 :class="parentLink.expanded ? '' : 'hover:text-gray-900 dark:hover:text-white'"
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -1702,10 +1674,7 @@
                 class="block truncate text-gray-800 transition dark:text-gray-100"
                 :class="parentLink.expanded ? '' : 'hover:text-gray-900 dark:hover:text-white'"
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -1811,10 +1780,7 @@
                     : 'hover:text-gray-900 dark:hover:text-white'
                 "
                 href="#0"
-                @click.prevent="
-                  parentLink.handleClick()
-                  sidebarExpanded = true
-                "
+      
               >
                 <div class="flex items-center justify-between">
                   <div class="flex items-center">
@@ -2186,10 +2152,10 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
+import { onMounted, onUnmounted, ref, watch } from 'vue';
 
-import SidebarLinkGroup from './SidebarLinkGroup.vue'
+
+import SidebarLinkGroup from './SidebarLinkGroup.vue';
 
 export default {
   name: 'Sidebar',
@@ -2200,11 +2166,13 @@ export default {
   setup(props, { emit }) {
     const trigger = ref(null)
     const sidebar = ref(null)
+    const router = useRouter()
 
     const storedSidebarExpanded = localStorage.getItem('sidebar-expanded')
     const sidebarExpanded = ref(
       storedSidebarExpanded === null ? false : storedSidebarExpanded === 'true',
     )
+
 
     const currentRoute = useRouter().currentRoute.value
 
@@ -2251,3 +2219,12 @@ export default {
 }
 </script>
 s
+
+
+<!-- 75 : @click.prevent=" parentLink.handleClick()  sidebarExpanded = true" -->
+
+<!-- 197: href="#0"
+                @click.prevent="
+                  parentLink.handleClick()
+                  sidebarExpanded = true
+                " -->
