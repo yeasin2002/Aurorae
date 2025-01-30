@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { cn } from '@/lib'
+import { cn } from '@/lib/utils'
 import { CalendarHeader, type CalendarHeaderProps, useForwardProps } from 'radix-vue'
 import { computed, type HTMLAttributes } from 'vue'
 
@@ -15,10 +15,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <CalendarHeader
-    :class="cn('relative flex w-full items-center justify-between pt-1', props.class)"
-    v-bind="forwardedProps"
-  >
+  <CalendarHeader :class="cn('relative flex w-full items-center justify-between pt-1', props.class)" v-bind="forwardedProps">
     <slot />
   </CalendarHeader>
 </template>
