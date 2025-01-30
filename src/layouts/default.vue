@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import Footer from '~/components/common/FooterSection.vue'
-import NavBar from '~/components/common/NavBar/NavBar.vue'
+import Footer from '~/components/common/FooterSection.vue';
+import NavBar from '~/components/common/NavBar/NavBar.vue';
 
-import "../assets/css/main.css"
+import "../assets/css/main.css";
+import '../components/charts/ChartjsConfig';
 </script>
 
 <template>
