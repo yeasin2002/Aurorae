@@ -4,4 +4,4 @@
 
 Explore Unique Stays Around the World Designed to Match Your Style and Comfort From Luxury Resorts to Budget-Friendly Options Find the Perfect Place for Your Next Adventure
 
-
+![Cover](./src/public/cover.png)
