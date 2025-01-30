@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col col-span-full sm:col-span-6 xl:col-span-4 bg-white dark:bg-gray-800 shadow-sm rounded-xl">
-    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60">
+  <div
+    class="col-span-full flex flex-col rounded-xl bg-white shadow-sm dark:bg-gray-800 sm:col-span-6 xl:col-span-4"
+  >
+    <header class="border-b border-gray-100 px-5 py-4 dark:border-gray-700/60">
       <h2 class="font-semibold text-gray-800 dark:text-gray-100">Top Countries</h2>
     </header>
     <!-- Chart built with Chart.js 3 -->
@@ -27,9 +29,7 @@ export default {
       datasets: [
         {
           label: 'Top Countries',
-          data: [
-            35, 30, 35,
-          ],
+          data: [35, 30, 35],
           backgroundColor: [
             tailwindConfig().theme.colors.violet[500],
             tailwindConfig().theme.colors.sky[500],
@@ -47,7 +47,7 @@ export default {
 
     return {
       chartData,
-    } 
-  }
+    }
+  },
 }
 </script>

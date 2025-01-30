@@ -1,8 +1,10 @@
 <template>
   <div class="px-5 py-3">
     <div class="flex items-start">
-      <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2 tabular-nums">$<span ref="chartValue">57.81</span></div>
-      <div ref="chartDeviation" class="text-sm font-medium px-1.5 rounded-full"></div>
+      <div class="mr-2 text-3xl font-bold tabular-nums text-gray-800 dark:text-gray-100">
+        $<span ref="chartValue">57.81</span>
+      </div>
+      <div ref="chartDeviation" class="rounded-full px-1.5 text-sm font-medium"></div>
     </div>
   </div>
   <div class="grow">
@@ -16,7 +18,13 @@ import { useDark } from '@vueuse/core'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart, LineController, LineElement, PointElement, LinearScale, TimeScale, Tooltip,
+  Chart,
+  LineController,
+  LineElement,
+  PointElement,
+  LinearScale,
+  TimeScale,
+  Tooltip,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
@@ -29,13 +37,19 @@ export default {
   name: 'RealtimeChart',
   props: ['data', 'width', 'height'],
   setup(props) {
-
     const canvas = ref(null)
     const chartValue = ref(null)
     const chartDeviation = ref(null)
     let chart = null
     const darkMode = useDark()
-    const { textColor, gridColor, tooltipTitleColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors
+    const {
+      textColor,
+      gridColor,
+      tooltipTitleColor,
+      tooltipBodyColor,
+      tooltipBgColor,
+      tooltipBorderColor,
+    } = chartColors
 
     // function that updates header values
     const handleHeaderValues = (data, chartValue, chartDeviation) => {
@@ -45,14 +59,14 @@ export default {
       chartValue.value.innerHTML = data.datasets[0].data[data.datasets[0].data.length - 1]
       if (diff < 0) {
         chartDeviation.value.style.backgroundColor = `rgba(${hexToRGB(tailwindConfig().theme.colors.red[500])}, 0.2)`
-        chartDeviation.value.style.color = tailwindConfig().theme.colors.red[700];
+        chartDeviation.value.style.color = tailwindConfig().theme.colors.red[700]
       } else {
         chartDeviation.value.style.backgroundColor = `rgba(${hexToRGB(tailwindConfig().theme.colors.green[500])}, 0.2)`
-        chartDeviation.value.style.color = tailwindConfig().theme.colors.green[700];
-      }      
+        chartDeviation.value.style.color = tailwindConfig().theme.colors.green[700]
+      }
       chartDeviation.value.innerHTML = `${diff > 0 ? '+' : ''}${diff.toFixed(2)}%`
-    }    
-    
+    }
+
     onMounted(() => {
       const ctx = canvas.value
       chart = new Chart(ctx, {
@@ -76,7 +90,7 @@ export default {
               },
               grid: {
                 color: darkMode.value ? gridColor.dark : gridColor.light,
-              },              
+              },
             },
             x: {
               type: 'time',
@@ -115,7 +129,7 @@ export default {
               titleColor: darkMode.value ? tooltipTitleColor.dark : tooltipTitleColor.light,
               bodyColor: darkMode.value ? tooltipBodyColor.dark : tooltipBodyColor.light,
               backgroundColor: darkMode.value ? tooltipBgColor.dark : tooltipBgColor.light,
-              borderColor: darkMode.value ? tooltipBorderColor.dark : tooltipBorderColor.light,               
+              borderColor: darkMode.value ? tooltipBorderColor.dark : tooltipBorderColor.light,
             },
           },
           interaction: {
@@ -139,8 +153,8 @@ export default {
         chart.data = data
         chart.update()
         // update header values
-        handleHeaderValues(data, chartValue, chartDeviation)        
-      }
+        handleHeaderValues(data, chartValue, chartDeviation)
+      },
     )
 
     watch(
@@ -164,13 +178,14 @@ export default {
           chart.options.plugins.tooltip.borderColor = tooltipBorderColor.light
         }
         chart.update('none')
-      })    
+      },
+    )
 
     return {
       canvas,
       chartValue,
       chartDeviation,
     }
-  }
+  },
 }
 </script>

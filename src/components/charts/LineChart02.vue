@@ -1,11 +1,11 @@
 <template>
   <div class="px-5 py-3">
-    <div class="flex flex-wrap justify-between items-end gap-y-2 gap-x-4">
+    <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
       <div class="flex items-start">
-        <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">$1,482</div>
-        <div class="text-sm font-medium text-red-700 px-1.5 bg-red-500/20 rounded-full">-22%</div>
+        <div class="mr-2 text-3xl font-bold text-gray-800 dark:text-gray-100">$1,482</div>
+        <div class="rounded-full bg-red-500/20 px-1.5 text-sm font-medium text-red-700">-22%</div>
       </div>
-      <div class="grow mb-1">
+      <div class="mb-1 grow">
         <ul ref="legend" class="flex flex-wrap gap-x-4 sm:justify-end"></ul>
       </div>
     </div>
@@ -13,7 +13,7 @@
   <!-- Chart built with Chart.js 3 -->
   <div class="grow">
     <canvas ref="canvas" :data="data" :width="width" :height="height"></canvas>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -22,7 +22,14 @@ import { useDark } from '@vueuse/core'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart, LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip,
+  Chart,
+  LineController,
+  LineElement,
+  Filler,
+  PointElement,
+  LinearScale,
+  TimeScale,
+  Tooltip,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
@@ -35,13 +42,13 @@ export default {
   name: 'LineChart02',
   props: ['data', 'width', 'height'],
   setup(props) {
-
     const canvas = ref(null)
     const legend = ref(null)
     let chart = null
     const darkMode = useDark()
-    const { textColor, gridColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors
-    
+    const { textColor, gridColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } =
+      chartColors
+
     onMounted(() => {
       const ctx = canvas.value
       chart = new Chart(ctx, {
@@ -55,7 +62,7 @@ export default {
             y: {
               border: {
                 display: false,
-              },              
+              },
               beginAtZero: true,
               ticks: {
                 maxTicksLimit: 5,
@@ -64,7 +71,7 @@ export default {
               },
               grid: {
                 color: darkMode.value ? gridColor.dark : gridColor.light,
-              },              
+              },
             },
             x: {
               type: 'time',
@@ -109,52 +116,54 @@ export default {
           maintainAspectRatio: false,
           resizeDelay: 200,
         },
-        plugins: [{
-          id: 'htmlLegend',
-          afterUpdate(c, args, options) {
-            const ul = legend.value
-            if (!ul) return
-            // Remove old legend items
-            while (ul.firstChild) {
-              ul.firstChild.remove()
-            }
-            // Reuse the built-in legendItems generator
-            const items = c.options.plugins.legend.labels.generateLabels(c)
-            items.slice(0, 2).forEach((item) => {
-              const li = document.createElement('li')
-              // Button element
-              const button = document.createElement('button')
-              button.style.display = 'inline-flex'
-              button.style.alignItems = 'center'
-              button.style.opacity = item.hidden ? '.3' : ''
-              button.onclick = () => {
-                c.setDatasetVisibility(item.datasetIndex, !c.isDatasetVisible(item.datasetIndex))
-                c.update()
+        plugins: [
+          {
+            id: 'htmlLegend',
+            afterUpdate(c, args, options) {
+              const ul = legend.value
+              if (!ul) return
+              // Remove old legend items
+              while (ul.firstChild) {
+                ul.firstChild.remove()
               }
-              // Color box
-              const box = document.createElement('span')
-              box.style.display = 'block'
-              box.style.width = tailwindConfig().theme.width[3]
-              box.style.height = tailwindConfig().theme.height[3]
-              box.style.borderRadius = tailwindConfig().theme.borderRadius.full
-              box.style.marginRight = tailwindConfig().theme.margin[2]
-              box.style.borderWidth = '3px'
-              box.style.borderColor = c.data.datasets[item.datasetIndex].borderColor
-              box.style.pointerEvents = 'none'
-              // Label
-              const label = document.createElement('span')
-              label.classList.add('text-gray-500', 'dark:text-gray-400')
-              label.style.fontSize = tailwindConfig().theme.fontSize.sm[0]
-              label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight
-              const labelText = document.createTextNode(item.text)
-              label.appendChild(labelText)
-              li.appendChild(button)
-              button.appendChild(box)
-              button.appendChild(label)
-              ul.appendChild(li)
-            })
+              // Reuse the built-in legendItems generator
+              const items = c.options.plugins.legend.labels.generateLabels(c)
+              items.slice(0, 2).forEach((item) => {
+                const li = document.createElement('li')
+                // Button element
+                const button = document.createElement('button')
+                button.style.display = 'inline-flex'
+                button.style.alignItems = 'center'
+                button.style.opacity = item.hidden ? '.3' : ''
+                button.onclick = () => {
+                  c.setDatasetVisibility(item.datasetIndex, !c.isDatasetVisible(item.datasetIndex))
+                  c.update()
+                }
+                // Color box
+                const box = document.createElement('span')
+                box.style.display = 'block'
+                box.style.width = tailwindConfig().theme.width[3]
+                box.style.height = tailwindConfig().theme.height[3]
+                box.style.borderRadius = tailwindConfig().theme.borderRadius.full
+                box.style.marginRight = tailwindConfig().theme.margin[2]
+                box.style.borderWidth = '3px'
+                box.style.borderColor = c.data.datasets[item.datasetIndex].borderColor
+                box.style.pointerEvents = 'none'
+                // Label
+                const label = document.createElement('span')
+                label.classList.add('text-gray-500', 'dark:text-gray-400')
+                label.style.fontSize = tailwindConfig().theme.fontSize.sm[0]
+                label.style.lineHeight = tailwindConfig().theme.fontSize.sm[1].lineHeight
+                const labelText = document.createTextNode(item.text)
+                label.appendChild(labelText)
+                li.appendChild(button)
+                button.appendChild(box)
+                button.appendChild(label)
+                ul.appendChild(li)
+              })
+            },
           },
-        }],
+        ],
       })
     })
 
@@ -179,12 +188,13 @@ export default {
           chart.options.plugins.tooltip.borderColor = tooltipBorderColor.light
         }
         chart.update('none')
-      })      
+      },
+    )
 
     return {
       canvas,
       legend,
     }
-  }
+  },
 }
 </script>

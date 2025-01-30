@@ -8,7 +8,14 @@ import { useDark } from '@vueuse/core'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart, LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip,
+  Chart,
+  LineController,
+  LineElement,
+  Filler,
+  PointElement,
+  LinearScale,
+  TimeScale,
+  Tooltip,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
@@ -21,12 +28,11 @@ export default {
   name: 'LineChart01',
   props: ['data', 'width', 'height'],
   setup(props) {
-
     const canvas = ref(null)
     let chart = null
     const darkMode = useDark()
     const { tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors
-    
+
     onMounted(() => {
       const ctx = canvas.value
 
@@ -90,11 +96,12 @@ export default {
           chart.options.plugins.tooltip.borderColor = tooltipBorderColor.light
         }
         chart.update('none')
-    })    
+      },
+    )
 
     return {
       canvas,
     }
-  }
+  },
 }
 </script>

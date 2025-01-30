@@ -19,10 +19,7 @@ import Banner from '../../components/dashboard/partials/Banner.vue'
 import Header from '../../components/dashboard/partials/Header.vue'
 import Sidebar from '../../components/dashboard/partials/Sidebar.vue'
 
-
-  const sidebarOpen = ref(false)
-  
-  
+const sidebarOpen = ref(false)
 </script>
 
 <template>

@@ -1,13 +1,13 @@
 <template>
-  <div class="grow flex flex-col justify-center">
+  <div class="flex grow flex-col justify-center">
     <div>
       <canvas ref="canvas" :data="data" :width="width" :height="height"></canvas>
     </div>
-    <div class="px-5 pt-2 pb-2">
-      <ul ref="legend" class="text-sm divide-y divide-gray-100 dark:divide-gray-700/60"></ul>
-      <ul class="text-sm divide-y divide-gray-100 dark:divide-gray-700/60"></ul>
+    <div class="px-5 pb-2 pt-2">
+      <ul ref="legend" class="divide-y divide-gray-100 text-sm dark:divide-gray-700/60"></ul>
+      <ul class="divide-y divide-gray-100 text-sm dark:divide-gray-700/60"></ul>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -16,7 +16,13 @@ import { useDark } from '@vueuse/core'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart, BarController, BarElement, LinearScale, CategoryScale, Tooltip, Legend,
+  Chart,
+  BarController,
+  BarElement,
+  LinearScale,
+  CategoryScale,
+  Tooltip,
+  Legend,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
@@ -29,19 +35,17 @@ export default {
   name: 'BarChart03',
   props: ['data', 'width', 'height'],
   setup(props) {
-
     const canvas = ref(null)
     const legend = ref(null)
     let chart = null
     const darkMode = useDark()
-    const { tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors    
-    
-    onMounted(() => {
+    const { tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors
 
+    onMounted(() => {
       // Calculate sum of values
       const reducer = (accumulator, currentValue) => accumulator + currentValue
-      const values = props.data.datasets.map(x => x.data.reduce(reducer))
-      const max = values.reduce(reducer)    
+      const values = props.data.datasets.map((x) => x.data.reduce(reducer))
+      const max = values.reduce(reducer)
 
       const ctx = canvas.value
       chart = new Chart(ctx, {
@@ -79,12 +83,12 @@ export default {
               },
               bodyColor: darkMode.value ? tooltipBodyColor.dark : tooltipBodyColor.light,
               backgroundColor: darkMode.value ? tooltipBgColor.dark : tooltipBgColor.light,
-              borderColor: darkMode.value ? tooltipBorderColor.dark : tooltipBorderColor.light,               
+              borderColor: darkMode.value ? tooltipBorderColor.dark : tooltipBorderColor.light,
             },
           },
           interaction: {
             intersect: false,
-            mode: 'nearest'
+            mode: 'nearest',
           },
           animation: {
             duration: 500,
@@ -92,51 +96,54 @@ export default {
           maintainAspectRatio: false,
           resizeDelay: 200,
         },
-        plugins: [{
-          id: 'htmlLegend',
-          afterUpdate(c, args, options) {
-            const ul = legend.value
-            if (!ul) return
-            // Remove old legend items
-            while (ul.firstChild) {
-              ul.firstChild.remove()
-            }
-            // Reuse the built-in legendItems generator
-            const items = c.options.plugins.legend.labels.generateLabels(c)
-            items.forEach((item) => {
-              const li = document.createElement('li')
-              li.style.display = 'flex'
-              li.style.justifyContent = 'space-between'
-              li.style.alignItems = 'center'
-              li.style.paddingTop = tailwindConfig().theme.padding[2.5]
-              li.style.paddingBottom = tailwindConfig().theme.padding[2.5]
-              const wrapper = document.createElement('div')
-              wrapper.style.display = 'flex'
-              wrapper.style.alignItems = 'center'
-              const box = document.createElement('div')
-              box.style.width = tailwindConfig().theme.width[3]
-              box.style.height = tailwindConfig().theme.width[3]
-              box.style.borderRadius = tailwindConfig().theme.borderRadius.sm
-              box.style.marginRight = tailwindConfig().theme.margin[3]
-              box.style.backgroundColor = item.fillStyle
-              const label = document.createElement('div')
-              const value = document.createElement('div')
-              value.style.fontWeight = tailwindConfig().theme.fontWeight.medium
-              value.style.marginLeft = tailwindConfig().theme.margin[3]
-              value.style.color = item.text === 'Other' ? tailwindConfig().theme.colors.gray[400] : item.fillStyle
-              const theValue = c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0)
-              const valueText = document.createTextNode(`${parseInt(theValue / max * 100)}%`)
-              const labelText = document.createTextNode(item.text)
-              value.appendChild(valueText)
-              label.appendChild(labelText)
-              ul.appendChild(li)
-              li.appendChild(wrapper)
-              li.appendChild(value)
-              wrapper.appendChild(box)
-              wrapper.appendChild(label)
-            })
+        plugins: [
+          {
+            id: 'htmlLegend',
+            afterUpdate(c, args, options) {
+              const ul = legend.value
+              if (!ul) return
+              // Remove old legend items
+              while (ul.firstChild) {
+                ul.firstChild.remove()
+              }
+              // Reuse the built-in legendItems generator
+              const items = c.options.plugins.legend.labels.generateLabels(c)
+              items.forEach((item) => {
+                const li = document.createElement('li')
+                li.style.display = 'flex'
+                li.style.justifyContent = 'space-between'
+                li.style.alignItems = 'center'
+                li.style.paddingTop = tailwindConfig().theme.padding[2.5]
+                li.style.paddingBottom = tailwindConfig().theme.padding[2.5]
+                const wrapper = document.createElement('div')
+                wrapper.style.display = 'flex'
+                wrapper.style.alignItems = 'center'
+                const box = document.createElement('div')
+                box.style.width = tailwindConfig().theme.width[3]
+                box.style.height = tailwindConfig().theme.width[3]
+                box.style.borderRadius = tailwindConfig().theme.borderRadius.sm
+                box.style.marginRight = tailwindConfig().theme.margin[3]
+                box.style.backgroundColor = item.fillStyle
+                const label = document.createElement('div')
+                const value = document.createElement('div')
+                value.style.fontWeight = tailwindConfig().theme.fontWeight.medium
+                value.style.marginLeft = tailwindConfig().theme.margin[3]
+                value.style.color =
+                  item.text === 'Other' ? tailwindConfig().theme.colors.gray[400] : item.fillStyle
+                const theValue = c.data.datasets[item.datasetIndex].data.reduce((a, b) => a + b, 0)
+                const valueText = document.createTextNode(`${parseInt((theValue / max) * 100)}%`)
+                const labelText = document.createTextNode(item.text)
+                value.appendChild(valueText)
+                label.appendChild(labelText)
+                ul.appendChild(li)
+                li.appendChild(wrapper)
+                li.appendChild(value)
+                wrapper.appendChild(box)
+                wrapper.appendChild(label)
+              })
+            },
           },
-        }],     
+        ],
       })
     })
 
@@ -155,12 +162,13 @@ export default {
           chart.options.plugins.tooltip.borderColor = tooltipBorderColor.light
         }
         chart.update('none')
-      })      
+      },
+    )
 
     return {
       canvas,
       legend,
     }
-  }
+  },
 }
 </script>

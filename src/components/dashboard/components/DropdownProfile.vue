@@ -2,15 +2,21 @@
   <div class="relative inline-flex">
     <button
       ref="trigger"
-      class="inline-flex justify-center items-center group"
+      class="group inline-flex items-center justify-center"
       aria-haspopup="true"
       @click.prevent="dropdownOpen = !dropdownOpen"
       :aria-expanded="dropdownOpen"
     >
-      <img class="w-8 h-8 rounded-full" :src="UserAvatar" width="32" height="32" alt="User" />
+      <img class="h-8 w-8 rounded-full" :src="UserAvatar" width="32" height="32" alt="User" />
       <div class="flex items-center truncate">
-        <span class="truncate ml-2 text-sm font-medium text-gray-600 dark:text-gray-100 group-hover:text-gray-800 dark:group-hover:text-white">Acme Inc.</span>
-        <svg class="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500" viewBox="0 0 12 12">
+        <span
+          class="ml-2 truncate text-sm font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-100 dark:group-hover:text-white"
+          >Acme Inc.</span
+        >
+        <svg
+          class="ml-1 h-3 w-3 shrink-0 fill-current text-gray-400 dark:text-gray-500"
+          viewBox="0 0 12 12"
+        >
           <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" />
         </svg>
       </div>
@@ -23,24 +29,34 @@
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-show="dropdownOpen" class="origin-top-right z-10 absolute top-full min-w-44 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700/60 py-1.5 rounded-lg shadow-lg overflow-hidden mt-1" :class="align === 'right' ? 'right-0' : 'left-0'">
-        <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200 dark:border-gray-700/60">
+      <div
+        v-show="dropdownOpen"
+        class="absolute top-full z-10 mt-1 min-w-44 origin-top-right overflow-hidden rounded-lg border border-gray-200 bg-white py-1.5 shadow-lg dark:border-gray-700/60 dark:bg-gray-800"
+        :class="align === 'right' ? 'right-0' : 'left-0'"
+      >
+        <div class="mb-1 border-b border-gray-200 px-3 pb-2 pt-0.5 dark:border-gray-700/60">
           <div class="font-medium text-gray-800 dark:text-gray-100">Acme Inc.</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 italic">Administrator</div>
+          <div class="text-xs italic text-gray-500 dark:text-gray-400">Administrator</div>
         </div>
-        <ul
-          ref="dropdown"
-          @focusin="dropdownOpen = true"
-          @focusout="dropdownOpen = false"
-        >
+        <ul ref="dropdown" @focusin="dropdownOpen = true" @focusout="dropdownOpen = false">
           <li>
-            <router-link class="font-medium text-sm text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3" to="/settings/account" @click="dropdownOpen = false">Settings</router-link>
+            <router-link
+              class="flex items-center px-3 py-1 text-sm font-medium text-violet-500 hover:text-violet-600 dark:hover:text-violet-400"
+              to="/settings/account"
+              @click="dropdownOpen = false"
+              >Settings</router-link
+            >
           </li>
           <li>
-            <router-link class="font-medium text-sm text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3" to="/signin" @click="dropdownOpen = false">Sign Out</router-link>
+            <router-link
+              class="flex items-center px-3 py-1 text-sm font-medium text-violet-500 hover:text-violet-600 dark:hover:text-violet-400"
+              to="/signin"
+              @click="dropdownOpen = false"
+              >Sign Out</router-link
+            >
           </li>
         </ul>
-      </div> 
+      </div>
     </transition>
   </div>
 </template>
@@ -56,16 +72,16 @@ export default {
     return {
       UserAvatar: UserAvatar,
     }
-  },  
+  },
   setup() {
-
     const dropdownOpen = ref(false)
     const trigger = ref(null)
     const dropdown = ref(null)
 
     // close on click outside
     const clickHandler = ({ target }) => {
-      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target)) return
+      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target))
+        return
       dropdownOpen.value = false
     }
 
@@ -90,6 +106,6 @@ export default {
       trigger,
       dropdown,
     }
-  }
+  },
 }
 </script>

@@ -3,13 +3,17 @@
     <button
       ref="trigger"
       class="rounded-full"
-      :class="dropdownOpen ? 'bg-gray-100 dark:bg-gray-700/60 text-gray-500 dark:text-gray-400' : 'text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400'"      
+      :class="
+        dropdownOpen
+          ? 'bg-gray-100 text-gray-500 dark:bg-gray-700/60 dark:text-gray-400'
+          : 'text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400'
+      "
       aria-haspopup="true"
       @click.prevent="dropdownOpen = !dropdownOpen"
       :aria-expanded="dropdownOpen"
     >
       <span class="sr-only">Menu</span>
-      <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32">
+      <svg class="h-8 w-8 fill-current" viewBox="0 0 32 32">
         <circle cx="16" cy="16" r="2" />
         <circle cx="10" cy="16" r="2" />
         <circle cx="22" cy="16" r="2" />
@@ -23,12 +27,12 @@
       leave-from-class="opacity-100"
       leave-to-class="opacity-0"
     >
-      <div v-show="dropdownOpen" class="origin-top-right z-10 absolute top-full min-w-36 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700/60 py-1.5 rounded-lg shadow-lg overflow-hidden mt-1" :class="align === 'right' ? 'right-0' : 'left-0'">
-        <ul
-          ref="dropdown"
-          @focusin="dropdownOpen = true"
-          @focusout="dropdownOpen = false"
-        >
+      <div
+        v-show="dropdownOpen"
+        class="absolute top-full z-10 mt-1 min-w-36 origin-top-right overflow-hidden rounded-lg border border-gray-200 bg-white py-1.5 shadow-lg dark:border-gray-700/60 dark:bg-gray-800"
+        :class="align === 'right' ? 'right-0' : 'left-0'"
+      >
+        <ul ref="dropdown" @focusin="dropdownOpen = true" @focusout="dropdownOpen = false">
           <slot />
         </ul>
       </div>
@@ -43,14 +47,14 @@ export default {
   name: 'DropdownEditMenu',
   props: ['align'],
   setup() {
-
     const dropdownOpen = ref(false)
     const trigger = ref(null)
     const dropdown = ref(null)
 
     // close on click outside
     const clickHandler = ({ target }) => {
-      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target)) return
+      if (!dropdownOpen.value || dropdown.value.contains(target) || trigger.value.contains(target))
+        return
       dropdownOpen.value = false
     }
 
@@ -75,6 +79,6 @@ export default {
       trigger,
       dropdown,
     }
-  }
+  },
 }
 </script>

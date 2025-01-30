@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col col-span-full sm:col-span-6 bg-white dark:bg-gray-800 shadow-sm rounded-xl">
-    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60">
+  <div
+    class="col-span-full flex flex-col rounded-xl bg-white shadow-sm dark:bg-gray-800 sm:col-span-6"
+  >
+    <header class="border-b border-gray-100 px-5 py-4 dark:border-gray-700/60">
       <h2 class="font-semibold text-gray-800 dark:text-gray-100">Direct VS Indirect</h2>
     </header>
     <!-- Chart built with Chart.js 3 -->
@@ -23,17 +25,12 @@ export default {
   },
   setup() {
     const chartData = ref({
-      labels: [
-        '12-01-2022', '01-01-2023', '02-01-2023',
-        '03-01-2023', '04-01-2023', '05-01-2023',
-      ],
+      labels: ['12-01-2022', '01-01-2023', '02-01-2023', '03-01-2023', '04-01-2023', '05-01-2023'],
       datasets: [
         // Light blue bars
         {
           label: 'Direct',
-          data: [
-            800, 1600, 900, 1300, 1950, 1700,
-          ],
+          data: [800, 1600, 900, 1300, 1950, 1700],
           backgroundColor: tailwindConfig().theme.colors.sky[500],
           hoverBackgroundColor: tailwindConfig().theme.colors.sky[600],
           barPercentage: 0.7,
@@ -43,9 +40,7 @@ export default {
         // Blue bars
         {
           label: 'Indirect',
-          data: [
-            4900, 2600, 5350, 4800, 5200, 4800,
-          ],
+          data: [4900, 2600, 5350, 4800, 5200, 4800],
           backgroundColor: tailwindConfig().theme.colors.violet[500],
           hoverBackgroundColor: tailwindConfig().theme.colors.violet[600],
           barPercentage: 0.7,
@@ -57,7 +52,7 @@ export default {
 
     return {
       chartData,
-    }    
-  }
+    }
+  },
 }
 </script>

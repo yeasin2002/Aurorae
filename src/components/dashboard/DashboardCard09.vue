@@ -1,15 +1,19 @@
 <template>
-  <div class="flex flex-col col-span-full sm:col-span-6 bg-white dark:bg-gray-800 shadow-sm rounded-xl">
-    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+  <div
+    class="col-span-full flex flex-col rounded-xl bg-white shadow-sm dark:bg-gray-800 sm:col-span-6"
+  >
+    <header class="flex items-center border-b border-gray-100 px-5 py-4 dark:border-gray-700/60">
       <h2 class="font-semibold text-gray-800 dark:text-gray-100">Sales VS Refunds</h2>
       <Tooltip class="ml-2" size="lg">
-        <div class="text-sm">Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</div>
+        <div class="text-sm">
+          Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.
+        </div>
       </Tooltip>
     </header>
     <div class="px-5 py-3">
       <div class="flex items-start">
-        <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">+$6,796</div>
-        <div class="text-sm font-medium text-red-700 px-1.5 bg-red-500/20 rounded-full">-34%</div>
+        <div class="mr-2 text-3xl font-bold text-gray-800 dark:text-gray-100">+$6,796</div>
+        <div class="rounded-full bg-red-500/20 px-1.5 text-sm font-medium text-red-700">-34%</div>
       </div>
     </div>
     <!-- Chart built with Chart.js 3 -->
@@ -17,7 +21,7 @@
       <!-- Change the height attribute to adjust the chart height -->
       <BarChart :data="chartData" width="595" height="248" />
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -36,29 +40,22 @@ export default {
   },
   setup() {
     const chartData = ref({
-      labels: [
-        '12-01-2022', '01-01-2023', '02-01-2023',
-        '03-01-2023', '04-01-2023', '05-01-2023',
-      ],
+      labels: ['12-01-2022', '01-01-2023', '02-01-2023', '03-01-2023', '04-01-2023', '05-01-2023'],
       datasets: [
         // Light blue bars
         {
           label: 'Stack 1',
-          data: [
-            6200, 9200, 6600, 8800, 5200, 9200,
-          ],
+          data: [6200, 9200, 6600, 8800, 5200, 9200],
           backgroundColor: tailwindConfig().theme.colors.violet[500],
           hoverBackgroundColor: tailwindConfig().theme.colors.violet[600],
-              barPercentage: 0.7,
-              categoryPercentage: 0.7,
-              borderRadius: 4,
+          barPercentage: 0.7,
+          categoryPercentage: 0.7,
+          borderRadius: 4,
         },
         // Blue bars
         {
           label: 'Stack 2',
-          data: [
-            -4000, -2600, -5350, -4000, -7500, -2000,
-          ],
+          data: [-4000, -2600, -5350, -4000, -7500, -2000],
           backgroundColor: tailwindConfig().theme.colors.violet[200],
           hoverBackgroundColor: tailwindConfig().theme.colors.violet[300],
           barPercentage: 0.7,
@@ -70,7 +67,7 @@ export default {
 
     return {
       chartData,
-    } 
-  }
+    }
+  },
 }
 </script>

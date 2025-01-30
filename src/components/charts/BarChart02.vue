@@ -7,9 +7,7 @@ import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useDark } from '@vueuse/core'
 import { chartColors } from './ChartjsConfig'
 
-import {
-  Chart, BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend,
-} from 'chart.js'
+import { Chart, BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend } from 'chart.js'
 import 'chartjs-adapter-moment'
 
 // Import utilities
@@ -21,12 +19,12 @@ export default {
   name: 'BarChart02',
   props: ['data', 'width', 'height'],
   setup(props) {
-
     const canvas = ref(null)
     let chart = null
     const darkMode = useDark()
-    const { textColor, gridColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } = chartColors
-    
+    const { textColor, gridColor, tooltipBodyColor, tooltipBgColor, tooltipBorderColor } =
+      chartColors
+
     onMounted(() => {
       const ctx = canvas.value
       chart = new Chart(ctx, {
@@ -55,7 +53,7 @@ export default {
               },
               grid: {
                 color: darkMode.value ? gridColor.dark : gridColor.light,
-              },              
+              },
             },
             x: {
               stacked: true,
@@ -128,11 +126,12 @@ export default {
           chart.options.plugins.tooltip.borderColor = tooltipBorderColor.light
         }
         chart.update('none')
-      })    
+      },
+    )
 
     return {
       canvas,
     }
-  }
+  },
 }
 </script>

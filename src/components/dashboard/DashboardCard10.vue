@@ -1,59 +1,63 @@
 <template>
-  <div class="col-span-full xl:col-span-6 bg-white dark:bg-gray-800 shadow-sm rounded-xl">
-    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60">
+  <div class="col-span-full rounded-xl bg-white shadow-sm dark:bg-gray-800 xl:col-span-6">
+    <header class="border-b border-gray-100 px-5 py-4 dark:border-gray-700/60">
       <h2 class="font-semibold text-gray-800 dark:text-gray-100">Customers</h2>
     </header>
     <div class="p-3">
-
       <!-- Table -->
       <div class="overflow-x-auto">
-        <table class="table-auto w-full">
+        <table class="w-full table-auto">
           <!-- Table header -->
-          <thead class="text-xs font-semibold uppercase dark:text-gray-500 bg-gray-50 dark:bg-gray-700 dark:bg-opacity-50">
+          <thead
+            class="bg-gray-50 text-xs font-semibold uppercase dark:bg-gray-700 dark:bg-opacity-50 dark:text-gray-500"
+          >
             <tr>
-              <th class="p-2 whitespace-nowrap">
-                <div class="font-semibold text-left">Name</div>
+              <th class="whitespace-nowrap p-2">
+                <div class="text-left font-semibold">Name</div>
               </th>
-              <th class="p-2 whitespace-nowrap">
-                <div class="font-semibold text-left">Email</div>
+              <th class="whitespace-nowrap p-2">
+                <div class="text-left font-semibold">Email</div>
               </th>
-              <th class="p-2 whitespace-nowrap">
-                <div class="font-semibold text-left">Spent</div>
+              <th class="whitespace-nowrap p-2">
+                <div class="text-left font-semibold">Spent</div>
               </th>
-              <th class="p-2 whitespace-nowrap">
-                <div class="font-semibold text-center">Country</div>
+              <th class="whitespace-nowrap p-2">
+                <div class="text-center font-semibold">Country</div>
               </th>
             </tr>
           </thead>
           <!-- Table body -->
-          <tbody class="text-sm divide-y divide-gray-100 dark:divide-gray-700/60">
-            <tr
-              v-for="customer in customers"
-              :key="customer.id"
-            >
-              <td class="p-2 whitespace-nowrap">
+          <tbody class="divide-y divide-gray-100 text-sm dark:divide-gray-700/60">
+            <tr v-for="customer in customers" :key="customer.id">
+              <td class="whitespace-nowrap p-2">
                 <div class="flex items-center">
-                  <div class="w-10 h-10 shrink-0 mr-2 sm:mr-3">
-                    <img class="rounded-full" :src="customer.image" width="40" height="40" :alt="customer.name" />
+                  <div class="mr-2 h-10 w-10 shrink-0 sm:mr-3">
+                    <img
+                      class="rounded-full"
+                      :src="customer.image"
+                      width="40"
+                      height="40"
+                      :alt="customer.name"
+                    />
                   </div>
-                  <div class="font-medium text-gray-800 dark:text-gray-100">{{customer.name}}</div>
+                  <div class="font-medium text-gray-800 dark:text-gray-100">
+                    {{ customer.name }}
+                  </div>
                 </div>
               </td>
-              <td class="p-2 whitespace-nowrap">
-                <div class="text-left">{{customer.email}}</div>
+              <td class="whitespace-nowrap p-2">
+                <div class="text-left">{{ customer.email }}</div>
               </td>
-              <td class="p-2 whitespace-nowrap">
-                <div class="text-left font-medium text-green-500">{{customer.spent}}</div>
+              <td class="whitespace-nowrap p-2">
+                <div class="text-left font-medium text-green-500">{{ customer.spent }}</div>
               </td>
-              <td class="p-2 whitespace-nowrap">
-                <div class="text-lg text-center">{{customer.location}}</div>
+              <td class="whitespace-nowrap p-2">
+                <div class="text-center text-lg">{{ customer.location }}</div>
               </td>
             </tr>
           </tbody>
         </table>
-
       </div>
-
     </div>
   </div>
 </template>
@@ -110,12 +114,12 @@ export default {
         email: 'longburak@gmail.com',
         location: '🇬🇧',
         spent: '$1,890.66',
-      },      
+      },
     ])
 
     return {
       customers,
-    }    
-  }
+    }
+  },
 }
 </script>

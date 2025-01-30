@@ -1,14 +1,16 @@
 <template>
-  <div class="flex flex-col col-span-full sm:col-span-6 bg-white dark:bg-gray-800 shadow-sm rounded-xl">
-    <header class="px-5 py-4 border-b border-gray-100 dark:border-gray-700/60 flex items-center">
+  <div
+    class="col-span-full flex flex-col rounded-xl bg-white shadow-sm dark:bg-gray-800 sm:col-span-6"
+  >
+    <header class="flex items-center border-b border-gray-100 px-5 py-4 dark:border-gray-700/60">
       <h2 class="font-semibold text-gray-800 dark:text-gray-100">Reason for Refunds</h2>
     </header>
     <div class="px-5 py-3">
       <div class="flex items-start">
-        <div class="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">449</div>
-        <div class="text-sm font-medium text-red-700 px-1.5 bg-red-500/20 rounded-full">-22%</div>
+        <div class="mr-2 text-3xl font-bold text-gray-800 dark:text-gray-100">449</div>
+        <div class="rounded-full bg-red-500/20 px-1.5 text-sm font-medium text-red-700">-22%</div>
       </div>
-    </div>    
+    </div>
     <!-- Chart built with Chart.js 3 -->
     <div class="grow">
       <!-- Change the height attribute to adjust the chart height -->
@@ -19,7 +21,7 @@
 
 <script>
 import { ref } from 'vue'
-import BarChart from '../../charts/BarChart03.vue'
+import BarChart from '../../components/charts/BarChart03.vue'
 
 // Import utilities
 import { tailwindConfig } from '../../utils/Utils'
@@ -28,7 +30,7 @@ export default {
   name: 'DashboardCard11',
   components: {
     BarChart,
-  },  
+  },
   setup() {
     const chartData = ref({
       labels: ['Reasons'],
@@ -78,7 +80,7 @@ export default {
 
     return {
       chartData,
-    } 
-  }
+    }
+  },
 }
 </script>
