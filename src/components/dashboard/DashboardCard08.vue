@@ -17,7 +17,7 @@ import LineChart from '@/components/charts/LineChart02.vue';
 import { ref } from 'vue';
 
 // Import utilities
-import { tailwindConfig } from '../../utils/Utils';
+import { tailwindConfig } from '@/utils/Utils';
 
 export default {
   name: 'DashboardCard08',

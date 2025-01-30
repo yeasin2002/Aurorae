@@ -17,24 +17,24 @@
 </template>
 
 <script>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useDark } from '@vueuse/core'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { chartColors } from './ChartjsConfig'
 
 import {
-  Chart,
-  LineController,
-  LineElement,
-  Filler,
-  PointElement,
-  LinearScale,
-  TimeScale,
-  Tooltip,
+    Chart,
+    Filler,
+    LinearScale,
+    LineController,
+    LineElement,
+    PointElement,
+    TimeScale,
+    Tooltip,
 } from 'chart.js'
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue, tailwindConfig } from '@/utils/Utils'
 
 Chart.register(LineController, LineElement, Filler, PointElement, LinearScale, TimeScale, Tooltip)
 

@@ -88,11 +88,11 @@
 <script>
 import { ref } from 'vue'
 
-import SearchModal from '../components/ModalSearch.vue'
-import Notifications from '../components/DropdownNotifications.vue'
 import Help from '../components/DropdownHelp.vue'
-import ThemeToggle from '../components/ThemeToggle.vue'
+import Notifications from '../components/DropdownNotifications.vue'
 import UserMenu from '../components/DropdownProfile.vue'
+import SearchModal from '../components/ModalSearch.vue'
+import ThemeToggle from '../components/ThemeToggle.vue'
 
 export default {
   name: 'Header',

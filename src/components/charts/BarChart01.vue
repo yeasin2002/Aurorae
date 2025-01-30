@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useDark } from '@vueuse/core'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { chartColors } from './ChartjsConfig'
 
-import { Chart, BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend } from 'chart.js'
+import { BarController, BarElement, Chart, Legend, LinearScale, TimeScale, Tooltip } from 'chart.js'
 import 'chartjs-adapter-moment'
 
 // Import utilities
-import { tailwindConfig, formatValue } from '../utils/Utils'
+import { formatValue, tailwindConfig } from '@/utils/Utils'
 
 Chart.register(BarController, BarElement, LinearScale, TimeScale, Tooltip, Legend)
 
