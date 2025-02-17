@@ -6,7 +6,7 @@ import { Button } from '~/components/ui/button'
 </script>
 
 <template>
-  <div class="pt-6">
+  <div class="pt-6 container">
     <nav class="flex items-center justify-between gap-x-3">
       <Logo />
       <div class="hidden space-x-4 lg:block">

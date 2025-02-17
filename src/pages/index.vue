@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Hero from '~/components/index-page/HeroArea.vue'
-import Service from '~/components/index-page/OurService.vue'
-import Project from '~/components/index-page/ProjectShowCase.vue'
+import Hero from '~/components/index-page/HeroArea.vue';
+import Service from '~/components/index-page/OurService.vue';
+import Project from '~/components/index-page/ProjectShowCase.vue';
 
 useSeoMeta({
   ogTitle: 'aurorae',

@@ -11,11 +11,11 @@ import { projectShowcase } from '~/data'
       desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleasing place to live. Pleasing environment for the people using the space."
     />
 
-    <div class="space-y-14 px-4 lg:mx-2 lg:space-y-4 lg:px-0">
+    <div class=" space-y-14 px-4 lg:mx-2 lg:space-y-4 lg:px-0">
       <div
         v-for="(item, index) in projectShowcase"
         :key="item.label"
-        class="group grid grid-cols-1 gap-y-3 text-black lg:grid-cols-12"
+        class="container mx-auto group grid grid-cols-1 gap-y-3 text-black lg:grid-cols-12"
       >
         <NuxtImg
           :src="item.img"

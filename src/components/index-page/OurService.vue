@@ -1,23 +1,25 @@
 <script lang="ts" setup>
-import { serviceData } from '~/data'
+import { serviceData } from '~/data';
+
 import SectionHeader from './SectionHeader.vue'
-// import LineArrow from '~/assets/icons/line-arrow.svg'
 </script>
 
 <template>
   <div>
-    <SectionHeader
-      heading1="What we can do"
-      heading2="for your home"
-      desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleassing place to live. Pleasing environment for the people using the space."
-    />
+    <div class="bg-white">
+      <SectionHeader
+        heading1="What we can do"
+        heading2="for your home"
+        desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleassing place to live. Pleasing environment for the people using the space."
+      />
+    </div>
 
     <!-- server list -->
     <div class="bg-primary px-2 pt-6 lg:px-10 lg:pb-8 lg:pt-14">
       <div
         v-for="item in serviceData"
         :key="item.label"
-        class="group flex items-center justify-between border-b border-b-background text-black lg:py-8"
+        class="group container mx-auto flex items-center justify-between border-b border-b-background text-black lg:py-8"
       >
         <div class="space-y-3 py-8 md:space-y-0 md:py-0">
           <h4 class="text-nowrap font-clash-display text-5xl font-medium">

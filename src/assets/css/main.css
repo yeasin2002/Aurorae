@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply mx-auto bg-background text-white;
+    @apply mx-auto bg-background text-white ;
   }
 }
 
