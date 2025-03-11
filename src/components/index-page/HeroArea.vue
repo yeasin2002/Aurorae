@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { Button } from '~/components/ui/button'
-import CounterAnimation from '~/components/common/NumberCounter.vue'
+import CounterAnimation from '~/components/common/NumberCounter.vue';
+import { Button } from '~/components/ui/button';
 
 const wordStatistics = [
   {
@@ -22,7 +22,7 @@ const wordStatistics = [
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-x-5 py-4 md:grid-cols-2">
+  <div class="grid grid-cols-1 gap-x-5 py-4 md:grid-cols-2 px-4 lg:px-0">
     <div>
       <h1 class="my-4 font-clash-display text-5xl md:my-0 lg:text-6xl">
         Let’s Design

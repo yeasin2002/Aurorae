@@ -17,7 +17,7 @@ import FooterSection from '~/components/common/FooterSection.vue';
       </div>
     </div>
   </header>
-
+ 
   <slot/>
 
   <FooterSection/>
