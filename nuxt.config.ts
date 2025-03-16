@@ -47,6 +47,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
+    '@prisma/nuxt',
   ],
-  buildModules: ['@unlighthouse/nuxt'],
 })
