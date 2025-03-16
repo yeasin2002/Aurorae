@@ -48,4 +48,5 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
   ],
+  buildModules: ['@unlighthouse/nuxt'],
 })

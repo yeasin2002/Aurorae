@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { navigation } from '~/data'
-import MobileNav from './MobileNav.vue'
 import Logo from '~/components/common/LogoFull.vue'
 import { Button } from '~/components/ui/button'
+import { navigation } from '~/data'
+import MobileNav from './MobileNav.vue'
 </script>
 
 <template>
@@ -19,9 +19,9 @@ import { Button } from '~/components/ui/button'
           {{ item.name }}
         </NuxtLink>
       </div>
-      <Button to="/login" class="hidden rounded-3xl font-aeonik lg:block" variant="secondary"
-        >Get Started</Button
-      >
+      <Button to="/login" class="hidden rounded-3xl font-aeonik lg:block" variant="secondary">
+        Login
+      </Button>
       <MobileNav />
     </nav>
     <div class="my-4 h-[0.10rem] w-full bg-gray-400"></div>
