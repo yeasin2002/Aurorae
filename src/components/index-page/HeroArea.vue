@@ -34,25 +34,11 @@ const wordStatistics = [
       <Button class="my-4 rounded-3xl font-clash-display font-bold">Get Started</Button>
       <div class="hidden items-center gap-x-1 md:flex">
         <NuxtImg
-          src="/assets/images/hero2.png"
+          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Product Image"
-          class="mt-8 rounded-sm xl:w-[80%] 2xl:w-full"
+          class="mt-8 rounded-sm xl:w-[80%] 2xl:w-full max-h-[22rem]"
         />
-        <div
-          id="scroll  direction"
-          class="hidden w-full items-center justify-center gap-x-2 gap-y-2 xl:flex"
-        >
-          <span
-            class="into-center rotate-90 rounded-full border border-primary p-2 text-primary transition-all group-hover:translate-x-2"
-          >
-            <Icon name="mingcute:arrow-right-line" />
-          </span>
 
-          <p class="text-xs">
-            Scroll to <br />
-            explore
-          </p>
-        </div>
       </div>
     </div>
     <!-- second section -->
