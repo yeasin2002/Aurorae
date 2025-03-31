@@ -1,3 +1,5 @@
+import { policyPage } from './policy-page.data'
+
 export const footerData = [
   {
     label: 'Address',
@@ -9,11 +11,7 @@ export const footerData = [
   },
   {
     label: 'Our Policies',
-    menu: [
-      { label: 'Privacy Policy', url: '#' },
-      { label: 'Terms of Use', url: '#' },
-      { label: 'Refund Policy', url: '#' },
-    ],
+    menu: policyPage,
   },
 ]
 

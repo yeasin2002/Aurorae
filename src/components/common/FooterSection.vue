@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { footerData, footerSocial } from '~/data'
-import Logo from '~/components/common/LogoFull.vue'
-import { Button } from '~/components/ui/button'
+import Logo from '~/components/common/LogoFull.vue';
+import { Button } from '~/components/ui/button';
+import { footerData, footerSocial, } from '~/data';
 </script>
 
 <template>
@@ -17,7 +17,8 @@ import { Button } from '~/components/ui/button'
           Interior design is the art of science of enhancing the interior of a building to achieve a
           healthier and more aesthetically pleasing environment for the people using the space.
         </p>
-        <Button class="rounded-3xl px-8 font-aeonik font-bold">Contact Now</Button>
+
+        <!-- <Button class="rounded-3xl px-8 font-aeonik font-bold">Contact Now</Button> -->
       </div>
     </div>
 
@@ -52,9 +53,9 @@ import { Button } from '~/components/ui/button'
               {{ data }}
             </span>
 
-            <a v-else :href="data.url">
-              {{ data.label }}
-            </a>
+            <NuxtLink v-else :href="data.link">
+              {{ data.title }}
+            </NuxtLink>
           </div>
         </div>
       </div>
