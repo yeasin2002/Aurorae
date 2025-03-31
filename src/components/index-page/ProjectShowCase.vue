@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { projectShowcase } from '~/data';
-import SectionHeader from './SectionHeader.vue';
+import { projectShowcase } from '~/data'
+import SectionHeader from './SectionHeader.vue'
 </script>
 
 <template>
@@ -21,7 +21,7 @@ import SectionHeader from './SectionHeader.vue';
           :src="item.img"
           :alt="`img of ${item.label}`"
           :class="{ 'lg:order-last': index % 2 === 0 }"
-          class="col-span-7 rounded-md xl:col-span-8 max-h-80 w-full object-cover"
+          class="col-span-7 max-h-80 w-full rounded-md object-cover xl:col-span-8"
         />
         <div class="col-span-5 flex flex-col justify-around gap-y-4 lg:mx-8 xl:col-span-4">
           <div>
@@ -31,6 +31,7 @@ import SectionHeader from './SectionHeader.vue';
             <p class="mt-2 font-aeonik text-base xl:text-lg">{{ item.dec }}</p>
           </div>
 
+          <!--
           <a :href="item.link" class="flex gap-x-3 lg:text-lg xl:text-xl">
             <span>View project</span>
             <span
@@ -38,7 +39,8 @@ import SectionHeader from './SectionHeader.vue';
             >
               <Icon name="mingcute:arrow-right-line" />
             </span>
-          </a>
+          </a>          
+-->
         </div>
       </div>
     </div>

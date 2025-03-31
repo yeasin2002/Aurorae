@@ -7,9 +7,9 @@ import SectionHeader from './SectionHeader.vue'
 <template>
   <div>
     <SectionHeader
-      heading1="What we can do"
-      heading2="for your home"
-      desc="We always provide the best for our clients in any case so that all their wishes can be realized and have a decent, comfortable and aesthetically pleassing place to live. Pleasing environment for the people using the space."
+      heading1="Why Choose Us?"
+      heading2=""
+      desc="we prioritize your comfort and convenience. Our platform is designed to provide a hassle-free booking experience, offering a wide selection of hotels at the best prices."
     />
 
     <!-- server list -->

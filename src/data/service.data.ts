@@ -1,19 +1,25 @@
 export const serviceData = [
   {
-    label: 'Interior Design',
-    desc: 'We always provide the best for our clients in any case so that all their wishes can be realised and have.',
+    label: 'Wide Range of Hotels',
+    desc: 'From budget stays to luxury resorts, find accommodations that suit your needs.',
     link: '',
     img: '',
   },
   {
-    label: 'Sticky Chair',
-    desc: 'We provide the best quality sticky chair for our clients. We always make sure that the chair is very comfortable and durable.',
+    label: 'Best Price Guarantee',
+    desc: 'Get competitive pricing with no hidden charges.',
     link: '',
     img: '',
   },
   {
-    label: 'Consultant',
-    desc: 'We provide the best consultant for our clients. We always make sure that the consultant is very professional and experienced.',
+    label: 'User-Friendly Interface',
+    desc: 'Easily search, filter, and book hotels hassle-free.',
+    link: '',
+    img: '',
+  },
+  {
+    label: 'Verified Reviews',
+    desc: 'Read honest reviews from real travelers before making a choice.',
     link: '',
     img: '',
   },

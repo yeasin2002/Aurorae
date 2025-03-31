@@ -25,13 +25,9 @@ const wordStatistics = [
   <div class="grid grid-cols-1 gap-x-5 py-4 md:grid-cols-2 px-4 lg:px-0">
     <div>
       <h1 class="my-4 font-clash-display text-5xl md:my-0 lg:text-6xl">
-        Let’s Design
-        <br />
-        Your Home
-        <br />
-        Very Easily
-      </h1>
-      <Button class="my-4 rounded-3xl font-clash-display font-bold">Get Started</Button>
+        Find the Best Hotels <br> at the Best Prices
+</h1>
+      <Button class="my-4 rounded-3xl font-clash-display font-bold !text-gray-900">Get Started</Button>
       <div class="hidden items-center gap-x-1 md:flex">
         <NuxtImg
           src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -45,8 +41,9 @@ const wordStatistics = [
 
     <div class="w-full xl:w-full">
       <h2>
-        Explore Unique Stays Around the World Designed to Match Your Style and Comfort From Luxury
-        Resorts to Budget-Friendly Options Find the Perfect Place for Your Next Adventure
+        Discover a seamless hotel booking experience with our platform. Whether you’re planning a vacation, a business trip, or a weekend getaway, we bring you a curated selection of top-rated hotels.
+
+
       </h2>
       <div class="mt-4 flex items-center gap-x-10">
         <div v-for="item in wordStatistics" :key="item.label">
