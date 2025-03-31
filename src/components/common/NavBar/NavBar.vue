@@ -19,6 +19,7 @@ import MobileNav from './MobileNav.vue'
           {{ item.name }}
         </NuxtLink>
       </div>
+
       <Button to="/login" class="hidden rounded-3xl font-aeonik lg:block" variant="secondary">
         Login
       </Button>

@@ -8,9 +8,9 @@ import { Button } from '~/components/ui/button'
   <footer class="container py-10">
     <div class="grid grid-cols-1 gap-y-4 px-2 sm:px-0 xl:grid-cols-2">
       <h3 class="font-clash-display text-6xl">
-        <span>Let’s Work</span>
+        <span>Let’s Find </span>
         <br />
-        <span class="ml-16 sm:ml-20">Together</span>
+        <span class="ml-16 sm:ml-20">Your Hotel</span>
       </h3>
       <div class="space-y-4">
         <p class="w-4/5 font-aeonik">

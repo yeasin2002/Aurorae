@@ -5,7 +5,7 @@ export const footerData = [
   },
   {
     label: 'Call Us',
-    menu: [`+0123 57896857`, `+0123 57896857 `, `xyzfreebook@gmail.com`],
+    menu: [`+0123 57896857`, `+0123 57896857 `, `mdkawsarislam2002@gmail.com`],
   },
   {
     label: 'Our Policies',
