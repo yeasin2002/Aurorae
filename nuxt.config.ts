@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-01-12',
   devtools: { enabled: true },
   srcDir: 'src/',
-  experimental: { typedPages: true },
+  experimental: { typedPages: true, componentIslands: true },
   app: { head: { htmlAttrs: { lang: 'en' } } },
 
   postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
@@ -49,4 +49,12 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@prisma/nuxt',
   ],
+
+  vite: {
+    resolve: {
+      alias: {
+        '.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js',
+      },
+    },
+  },
 })

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Hotel from '@/components/cards/hotel-cards.vue'
-import CTA from './hotelList-CTA.vue'
-import { amenities } from '~/data'
+import Hotel from '@/components/cards/hotel-cards.vue';
+import { amenities } from '~/data';
+import CTA from './hotelList-CTA.vue';
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#1C1C1C] text-white">
+  <div class="min-h-screen">
     <!-- Hero Section -->
     <section class="container mx-auto px-4 py-16">
       <div class="max-w-3xl">

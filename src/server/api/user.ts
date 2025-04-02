@@ -1,6 +1,7 @@
-import Prisma from '@/lib/prisma'
+import prisma from '~/lib/prisma'
 
 export default defineEventHandler(async (event) => {
-  return await Prisma.user.findMany()
+  return {
+    user: await prisma.user.findFirst(),
+  }
 })
-  
