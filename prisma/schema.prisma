@@ -7,18 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @map("_id")
-  email String  @unique
-  name  String?
-  posts Post[]
+model Post {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
 }
 
-model Post {
-  id        Int     @id @map("_id")
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User    @relation(fields: [authorId], references: [id])
-  authorId  Int
+model User {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  email Json?  @unique
 }

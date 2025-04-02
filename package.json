@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev --host",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "format": "prettier --write ./components ./src"
+    "format": "prettier --write ./components ./src",
+    "prisma:push": "prisma db push"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.24",

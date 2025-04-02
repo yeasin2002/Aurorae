@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     customCollections: [{ prefix: 'local', dir: './src/public/assets/svg' }],
   },
 
-  site: { url: 'https://furniture-worlds.vercel.app', name: 'auroraes' },
+  site: { url: 'https://aurorae2002.vercel.app/', name: 'auroraes' },
   seo: {
     meta: {
       description: 'aurorae',
@@ -30,9 +30,8 @@ export default defineNuxtConfig({
       ogSiteName: 'aurorae',
       ogLocale: 'en_US',
       ogType: 'website',
-      ogUrl: 'https://furniture-worlds.vercel.app/',
+      ogUrl: 'https://aurorae2002.vercel.app/',
       ogTitle: 'aurorae',
-
       ogImage: '/cover.png',
       robots: 'index, follow',
     },
