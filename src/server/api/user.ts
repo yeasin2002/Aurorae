@@ -1,8 +1,15 @@
-// import prisma from '~/lib/prisma'
+import prisma from '~/lib/prisma'
 
 export default defineEventHandler(async (event) => {
-  return {
-    status: 200,
-    user: '',
+  try {
+    await prisma.$connect()
+    return {
+      status: 200,
+      user: await prisma.user.findMany(),
+    }
+  } catch (error) {
+    return { status: 500, message: error }
+  } finally {
+    await prisma.$disconnect()
   }
 })

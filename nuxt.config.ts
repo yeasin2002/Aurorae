@@ -46,7 +46,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/fonts',
     '@nuxt/icon',
-    //     '@prisma/nuxt',
+    '@prisma/nuxt',
   ],
 
   // vite: {
