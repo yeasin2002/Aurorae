@@ -49,7 +49,14 @@ export default defineNuxtConfig({
     '@prisma/nuxt',
   ],
 
-  // vite: {
-  //   resolve: {alias: {'.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js',},},
-  // },
+  prisma: {
+    skipPrompts: true,
+    // autoSetupPrisma: true
+  },
+
+  vite: {
+    resolve: {
+      alias: { '.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js' },
+    },
+  },
 })
