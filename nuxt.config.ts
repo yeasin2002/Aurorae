@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 
   prisma: {
     skipPrompts: true,
+
     // autoSetupPrisma: true
   },
 
