@@ -23,10 +23,21 @@ const deleteAllSchema = async () => {
 export default defineEventHandler(async (event) => {
   try {
     await prisma.$connect()
-    await deleteAllSchema()
+    // await deleteAllSchema()
+    const createUser = await prisma.user.create({
+      data: {
+        email: 'test@example.com',
+        password: '123456',
+        firstName: 'John',
+        lastName: 'Doe',
+        phoneNumber: '1234567890',
+        profilePicture: 'https://picsum.photos/512',
+      },
+    })
     return {
       status: 200,
       message: 'Data cleared successfully',
+      data: createUser,
     }
   } catch (error) {
     return { status: 500, message: error }

@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "format": "prettier --write ./components ./src",
-    "prisma:push": "prisma db push"
+    "prisma:push": "prisma generate && prisma db push"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.24",
