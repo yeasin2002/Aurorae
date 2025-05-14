@@ -11,7 +11,7 @@ import {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#1a1b1e] text-[#f2f5f9]">
+  <div class="min-h-screen text-[#f2f5f9]">
     <AboutHero />
     <OurStory />
     <OurValues />
