@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import Logo from '~/components/common/LogoFull.vue';
-import { Button } from '~/components/ui/button';
-import { footerData, footerSocial, } from '~/data';
+import { footerData, footerSocial } from '~/data';
 </script>
 
 <template>
@@ -30,11 +29,10 @@ import { footerData, footerSocial, } from '~/data';
           <a
             v-for="icon in footerSocial"
             :key="icon.label"
-            :href="icon.label"
+            :href="icon.link"
             class="flex items-center justify-center rounded-full bg-white p-1"
             target="_blank"
           >
-            <!-- <component :is="icon.icon" class="size-4 text-black" /> -->
             <Icon :name="icon.icon" class="size-4 text-black" />
             <span class="sr-only"> Contact via {{ icon.label }} </span>
           </a>

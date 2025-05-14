@@ -49,11 +49,7 @@ export default defineNuxtConfig({
     '@prisma/nuxt',
   ],
 
-  prisma: {
-    skipPrompts: true,
-
-    // autoSetupPrisma: true
-  },
+  prisma: { skipPrompts: true },
 
   vite: {
     resolve: {

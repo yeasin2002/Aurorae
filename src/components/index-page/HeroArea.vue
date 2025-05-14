@@ -4,18 +4,21 @@
       <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         <!-- Left Column -->
         <div class="flex flex-col justify-center">
-          <h1 class="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-clash-display">
+          <h1
+            class="mb-8 font-clash-display text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+          >
             Find the Best Hotels<br />at the Best Prices
           </h1>
-          <button
-            class="w-fit rounded-full bg-yellow-400 px-8 py-3 font-bold text-gray-900 transition duration-300 hover:bg-yellow-500 font-aeonik"
+          <NuxtLink
+            to="/hotels"
+            class="w-fit rounded-full bg-yellow-400 px-8 py-3 font-aeonik font-bold text-gray-900 transition duration-300 hover:bg-yellow-500"
           >
             Get Started
-          </button>
+          </NuxtLink>
         </div>
         <!-- Right Column -->
         <div class="flex flex-col">
-          <p class="mb-8 text-lg xl:text-xl font-aeonik">
+          <p class="mb-8 font-aeonik text-lg xl:text-xl">
             Discover a seamless hotel booking experience with our platform. Whether you're planning
             a vacation, a business trip, or a weekend getaway, we bring you a curated selection of
             top-rated hotels.
@@ -23,16 +26,16 @@
           <!-- Stats -->
           <div class="mb-10 grid grid-cols-3 gap-4">
             <div class="flex flex-col">
-              <span class="text-xl font-bold md:text-2xl font-clash-display">400.00 +</span>
-              <span class="text-sm text-gray-400 font-aeonik">Client</span>
+              <span class="font-clash-display text-xl font-bold md:text-2xl">400.00 +</span>
+              <span class="font-aeonik text-sm text-gray-400">Client</span>
             </div>
             <div class="flex flex-col">
-              <span class="text-xl font-bold md:text-2xl font-clash-display">2.50 K+</span>
-              <span class="text-sm text-gray-400 font-aeonik">Product</span>
+              <span class="font-clash-display text-xl font-bold md:text-2xl">2.50 K+</span>
+              <span class="font-aeonik text-sm text-gray-400">Product</span>
             </div>
             <div class="flex flex-col">
-              <span class="text-xl font-bold md:text-2xl font-clash-display">2.50 K+</span>
-              <span class="text-sm text-gray-400 font-aeonik">Year Experience</span>
+              <span class="font-clash-display text-xl font-bold md:text-2xl">2.50 K+</span>
+              <span class="font-aeonik text-sm text-gray-400">Year Experience</span>
             </div>
           </div>
         </div>

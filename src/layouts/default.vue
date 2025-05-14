@@ -4,6 +4,14 @@ import NavBar from '~/components/common/NavBar/NavBar.vue';
 
 import '../assets/css/main.css'
 
+
+useSeoMeta({
+  ogTitle: 'aurorae',
+  ogDescription: 'Interior design, building  pleasing environment',
+  ogImage: '/cover.png',
+  description: 'Interior design is the art of science of enhancing the interior of a building.',
+})
+
 </script>
 
 <template>

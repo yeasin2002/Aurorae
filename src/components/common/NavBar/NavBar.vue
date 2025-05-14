@@ -11,7 +11,7 @@ import MobileNav from './MobileNav.vue'
       <Logo />
       <div class="hidden space-x-4 lg:block">
         <NuxtLink
-          v-for="item in navigation"
+          v-for="item in navigation.slice(1)"
           :key="item.name"
           :to="item.href"
           class="font-aeonik font-medium"

@@ -1,18 +1,9 @@
 import { policyPage } from './policy-page.data'
 
 export const footerData = [
-  {
-    label: 'Address',
-    menu: [`356, road - 3, NewYork, \n United State`],
-  },
-  {
-    label: 'Call Us',
-    menu: [`+0123 57896857`, `+0123 57896857 `, `mdkawsarislam2002@gmail.com`],
-  },
-  {
-    label: 'Our Policies',
-    menu: policyPage,
-  },
+  { label: 'Address', menu: [`Dhaka Cantonment, Dhaka -1206`] },
+  { label: 'Call Us', menu: [`+88 01632227965`, `mdkawsarislam2002@gmail.com`] },
+  { label: 'Our Policies', menu: policyPage },
 ]
 
 export const footerSocial = [
@@ -23,13 +14,13 @@ export const footerSocial = [
   },
   {
     label: 'Twitter',
-    link: 'https://x.com/yeasin2002_dev',
-    icon: 'lucide:twitter',
+    link: 'https://github.com/yeasin2002',
+    icon: 'lucide:github',
   },
 
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/mdkawsarislam2002/',
-    icon: 'lucide:instagram',
+    link: 'https://www.linkedin.com/in/yeasin2002/',
+    icon: 'lucide:linkedin',
   },
 ]
