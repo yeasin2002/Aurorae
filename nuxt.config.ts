@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   experimental: { typedPages: true, componentIslands: true },
   app: { head: { htmlAttrs: { lang: "en" } } },
 
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+    },
+  },
+
   postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
   icon: {
     provider: "server",
@@ -46,5 +53,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/fonts",
     "@nuxt/icon",
+    "@nuxtjs/supabase",
   ],
 });
