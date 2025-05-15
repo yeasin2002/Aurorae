@@ -4,9 +4,9 @@ import Hero from "~/components/index-page/HeroArea.vue";
 import Service from "~/components/index-page/OurService.vue";
 import Project from "~/components/index-page/ProjectShowCase.vue";
 
-const config = useRuntimeConfig();
-console.log("supabaseUrl : ", config.public.supabaseUrl);
-console.log('supabaseAnonKey : ', config.public.supabaseAnonKey)
+// const config = useRuntimeConfig();
+// console.log("supabaseUrl : ", config.public.supabaseUrl);
+// console.log('supabaseAnonKey : ', config.public.supabaseAnonKey)
 
 </script>
 
