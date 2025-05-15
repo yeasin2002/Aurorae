@@ -3,10 +3,16 @@ import Hotel from "@/components/cards/hotel-cards.vue";
 import Hero from "~/components/index-page/HeroArea.vue";
 import Service from "~/components/index-page/OurService.vue";
 import Project from "~/components/index-page/ProjectShowCase.vue";
+
+const config = useRuntimeConfig();
+console.log("supabaseUrl : ", config.public.supabaseUrl);
+console.log('supabaseAnonKey : ', config.public.supabaseAnonKey)
+
 </script>
 
 <template>
   <Hero />
+
   <section class="mb-16 space-y-10">
     <div class="mb-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <Hotel />
