@@ -19,11 +19,12 @@
             Join over 400,000 travelers who've discovered the Aurorae difference. Sign up today and
             get 15% off your first booking.
           </p>
-          <button
+          <NuxtLink
+            to="/hotels"
             class="rounded-xl bg-yellow-400 px-8 py-4 text-lg font-medium text-[#1a1b1e] transition-colors hover:bg-yellow-300"
           >
             Get Started
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { team } from '~/data/about.data'
+import { team } from "~/data/about.data";
 </script>
 
 <template>
@@ -22,16 +22,16 @@ import { team } from '~/data/about.data'
         <div v-for="(member, index) in team" :key="index" class="group">
           <div class="relative mb-4 aspect-[3/4] overflow-hidden rounded-xl bg-gray-800">
             <img
-              :src="`https://picsum.photos/300/400?random=${index + 10}`"
+              :src="member.img"
               :alt="member.name"
               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div
               class="absolute inset-0 flex items-end bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             >
-              <button class="rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-[#1a1b1e]">
+              <!-- <button class="rounded-lg bg-yellow-400 px-4 py-2 text-sm font-medium text-[#1a1b1e]">
                 Connect
-              </button>
+              </button> -->
             </div>
           </div>
           <h3 class="text-lg font-bold">{{ member.name }}</h3>

@@ -6,7 +6,7 @@
           <div class="relative">
             <div class="aspect-square overflow-hidden rounded-2xl">
               <img
-                src="https://picsum.photos/600/600?random=1"
+                src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Our story"
                 class="h-full w-full object-cover"
               />
