@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     customCollections: [{ prefix: "local", dir: "./src/public/assets/svg" }],
   },
 
+  // SEO and metadata
   site: { url: "https://aurorae2002.vercel.app/", name: "auroraes" },
   seo: {
     meta: {
@@ -48,6 +49,11 @@ export default defineNuxtConfig({
       ogImage: "/cover.png",
       robots: "index, follow",
     },
+  },
+
+  image: {
+    domains: ["images.unsplash.com"],
+    provider: "ipx",
   },
 
   modules: [

@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import Hotel from "@/components/cards/hotel-cards.vue";
-import Hero from "~/components/index-page/HeroArea.vue";
-import Service from "~/components/index-page/OurService.vue";
-import Project from "~/components/index-page/ProjectShowCase.vue";
+import Hero from "~/feature/landing-page/HeroArea.vue";
+import Service from "~/feature/landing-page/OurService.vue";
+import Project from "~/feature/landing-page/ProjectShowCase.vue";
 
 // const config = useRuntimeConfig();
 // console.log("supabaseUrl : ", config.public.supabaseUrl);
 // console.log('supabaseAnonKey : ', config.public.supabaseAnonKey)
-
 </script>
 
 <template>
