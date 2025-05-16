@@ -20,7 +20,7 @@ import MobileNav from "./MobileNav.vue";
       </div>
 
       <NuxtLink
-        to="/login"
+        to="/sign-in"
         class="w-fit rounded-2xl bg-gray-50 px-6 py-2 font-aeonik font-bold text-gray-900 transition duration-300 hover:bg-gray-100 text-sm"
       >
         Login

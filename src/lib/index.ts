@@ -1,3 +1,2 @@
-export * from './cn'
-export * from './prisma'
+export * from "./cn";
 
