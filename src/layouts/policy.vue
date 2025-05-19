@@ -1,10 +1,13 @@
 <script setup>
-import { useRoute } from 'vue-router'
-import FooterSection from '~/components/common/FooterSection.vue'
-import NavBar from '~/components/common/NavBar/NavBar.vue'
-import { policyPage } from '~/data'
+import { useRoute } from "vue-router";
+import FooterSection from "~/components/common/FooterSection.vue";
+import NavBar from "~/components/common/NavBar/NavBar.vue";
+import { policyPage } from "~/data";
 
-const route = useRoute()
+const route = useRoute();
+useSeoMeta({
+  title: "Policies",
+});
 </script>
 
 <template>

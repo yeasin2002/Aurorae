@@ -4,7 +4,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "src/",
   experimental: { typedPages: true, componentIslands: true },
-  app: { head: { htmlAttrs: { lang: "en" } } },
+  app: {
+    head: {
+      htmlAttrs: { lang: "en" },
+      titleTemplate: "%s | aurorae",
+    },
+  },
 
   runtimeConfig: {
     public: {
@@ -26,15 +31,19 @@ export default defineNuxtConfig({
     customCollections: [{ prefix: "local", dir: "./src/public/assets/svg" }],
   },
 
+  image: {
+    domains: ["images.unsplash.com"],
+    provider: "ipx",
+  },
+
   // SEO and metadata
   site: { url: "https://aurorae2002.vercel.app/", name: "auroraes" },
   seo: {
     meta: {
+      title: "Aurorae",
+      titleTemplate: "%s - Aurorae",
       description: "aurorae",
-      themeColor: [
-        { content: "#18181b", media: "(prefers-color-scheme: dark)" },
-        { content: "white", media: "(prefers-color-scheme: light)" },
-      ],
+
       twitterCreator: "@yeasin2002_dev",
       twitterSite: "@yeasin2002_dev",
       author: "Md Kawsar Islam Yeasin",
@@ -48,12 +57,12 @@ export default defineNuxtConfig({
       ogTitle: "aurorae",
       ogImage: "/cover.png",
       robots: "index, follow",
-    },
-  },
 
-  image: {
-    domains: ["images.unsplash.com"],
-    provider: "ipx",
+      themeColor: [
+        { content: "#18181b", media: "(prefers-color-scheme: dark)" },
+        { content: "white", media: "(prefers-color-scheme: light)" },
+      ],
+    },
   },
 
   modules: [

@@ -1,17 +1,12 @@
 <script setup lang="ts">
-import Footer from '~/components/common/FooterSection.vue';
-import NavBar from '~/components/common/NavBar/NavBar.vue';
+import Footer from "~/components/common/FooterSection.vue";
+import NavBar from "~/components/common/NavBar/NavBar.vue";
 
-import '../assets/css/main.css'
-
-
+import "../assets/css/main.css";
 useSeoMeta({
-  ogTitle: 'aurorae',
-  ogDescription: 'Interior design, building  pleasing environment',
-  ogImage: '/cover.png',
-  description: 'Interior design is the art of science of enhancing the interior of a building.',
-})
-
+  title: "aurorae",
+  titleTemplate: "%s | Find your Hotel",
+});
 </script>
 
 <template>

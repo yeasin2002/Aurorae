@@ -1,7 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'auth',
-})
+  layout: "auth",
+});
+
+useSeoMeta({
+  title: "sign up",
+});
 </script>
 
 <template>

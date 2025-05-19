@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import FooterSection from '~/components/common/FooterSection.vue';
+import FooterSection from "~/components/common/FooterSection.vue";
 
+useSeoMeta({
+  title: "Profile",
+});
 </script>
 
 <template>
@@ -17,10 +20,8 @@ import FooterSection from '~/components/common/FooterSection.vue';
       </div>
     </div>
   </header>
- 
-  <slot/>
 
-  <FooterSection/>
+  <slot />
+
+  <FooterSection />
 </template>
-
-
