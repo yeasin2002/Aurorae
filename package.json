@@ -33,9 +33,11 @@
     "tailwindcss-animate": "^1.0.7",
     "unenv": "^1.10.0",
     "v-calendar": "^2.4.2",
+    "vee-validate": "^4.15.0",
     "vue": "latest",
     "vue-flatpickr-component": "^11.0.5",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@iconify-json/mingcute": "^1.2.3",

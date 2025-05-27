@@ -2,7 +2,7 @@
 import Footer from "~/components/common/FooterSection.vue";
 import NavBar from "~/components/common/NavBar/NavBar.vue";
 
-import "../assets/css/main.css";
+
 useSeoMeta({
   title: "aurorae",
   titleTemplate: "%s | Find your Hotel",
