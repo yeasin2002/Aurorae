@@ -1,27 +1,46 @@
 <script setup lang="ts">
-import LogoFull from "~/components/common/LogoFull.vue";
-import FlickeringGrid from "~/components/inspira-ui/FlickeringGrid.vue";
-
 useSeoMeta({
   title: "auth",
+});
+
+import { onMounted, ref } from "vue";
+import LogoFull from "~/components/common/LogoFull.vue";
+import { BlurReveal } from "~/components/inspira-ui/blur-reveal";
+import FlickeringGrid from "~/components/inspira-ui/FlickeringGrid.vue";
+import { travelQuotes, type travelQuotesType } from "~/data";
+
+const quote = ref<travelQuotesType>({
+  quote: "",
+  writer: "",
+  image: "",
+  metadata: { nationality: "", source: "", tags: [] },
+});
+
+onMounted(() => {
+  quote.value = travelQuotes[Math.floor(Math.random() * travelQuotes.length)];
 });
 </script>
 
 <template>
-  <div class="min-h-screen  font-sans text-white">
+  <div class="min-h-screen font-sans text-white">
     <!-- Header -->
-    <header class="absolute left-0 right-0 top-0 flex items-center justify-start p-6">
+    <header class="absolute left-0 right-0 top-0 flex items-center justify-between px-16 py-6">
       <LogoFull />
-      <!-- <a href="#" class="text-sm text-white hover:text-gray-300">Login</a> -->
+      <NuxtLink to="/" class="text-sm text-white hover:text-gray-300">
+        <Icon name="lucide:home" class="mr-2 inline-block size-5" />
+        <span class="font-clash-display"> Go Home </span>
+      </NuxtLink>
     </header>
 
     <!-- Main Content -->
     <main class="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-      <div class="relative  p-16 hidden lg:flex">
+      <div class="relative hidden p-16 lg:flex">
         <ClientOnly>
-          <div class="absolute top-0 left-0 h-full w-full overflow-hidden rounded-lg  overflow-x-hidden select-none">
+          <div
+            class="absolute left-0 top-0 h-full w-full select-none overflow-hidden overflow-x-hidden rounded-lg"
+          >
             <FlickeringGrid
-              class="relative inset-0 -left-1/2 z-0 h-full w-full [mask-image:radial-gradient(450px_circle_at_center,white,transparent)] !select-none opacity-50  "
+              class="relative inset-0 -left-1/2 z-0 h-full w-full !select-none opacity-50 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
               :square-size="4"
               :grid-gap="6"
               color="#FED500"
@@ -33,12 +52,13 @@ useSeoMeta({
           </div>
         </ClientOnly>
         <!-- Left Section -->
-        <section class=" flex flex-col justify-center  ">
-          <blockquote class="mb-8 text-3xl font-medium leading-relaxed">
-            "This library has saved me countless hours of work and helped me deliver stunning designs
-            to my clients faster than ever before."
-          </blockquote>
-          <p class="text-gray-500">Sofia Davis</p>
+        <section class="flex flex-col justify-center">
+          <BlurReveal :delay="0.2" :duration="0.75" class="p-8">
+            <blockquote class="mb-8 text-3xl font-medium leading-relaxed">
+              {{ quote.quote }}
+            </blockquote>
+            <p class="text-gray-500">- {{ quote.writer }}</p>
+          </BlurReveal>
         </section>
       </div>
 

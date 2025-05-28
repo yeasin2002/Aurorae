@@ -1,3 +1,3 @@
-import BoxReveal from "./BoxReveal.vue";
+import BoxReveal from "./BoxRevealAnimation.vue";
 
 export { BoxReveal };

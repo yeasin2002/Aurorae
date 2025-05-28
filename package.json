@@ -45,7 +45,6 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@iconify-json/mingcute": "^1.2.3",
     "@iconify-json/radix-icons": "^1.2.2",
     "@inspira-ui/plugins": "^0.0.1",
     "@nuxtjs/eslint-module": "^4.1.0",

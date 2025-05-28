@@ -1,3 +1,3 @@
-import RadiantText from "./RadiantText.vue";
+import RadiantText from "./RadiantTextAnimation.vue";
 
 export { RadiantText };

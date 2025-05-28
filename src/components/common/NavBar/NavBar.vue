@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import Logo from "~/components/common/LogoFull.vue";
+import { RippleButton } from "~/components/inspira-ui/ripple-button/index";
 import { navigation } from "~/data";
 import MobileNav from "./MobileNav.vue";
+
+const router = useRouter();
 </script>
 
 <template>
@@ -19,12 +22,12 @@ import MobileNav from "./MobileNav.vue";
         </NuxtLink>
       </div>
 
-      <NuxtLink
-        to="/sign-in"
-        class="w-fit rounded-2xl bg-gray-50 px-6 py-2 font-aeonik font-bold text-gray-900 transition duration-300 hover:bg-gray-100 text-sm"
+      <RippleButton
+        class="w-fit rounded-2xl bg-gray-50 px-6 py-2 font-aeonik text-sm font-bold text-gray-900 transition duration-300 hover:bg-gray-100"
+        @click="router.push('/sign-in')"
       >
         Login
-      </NuxtLink>
+      </RippleButton>
 
       <MobileNav />
     </nav>
