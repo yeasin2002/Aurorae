@@ -24,7 +24,9 @@ onMounted(() => {
 <template>
   <div class="min-h-screen font-sans text-white">
     <!-- Header -->
-    <header class="absolute left-0 right-0 top-0 flex items-center justify-between px-16 py-6">
+    <header
+      class="absolute left-0 right-0 top-0 hidden items-center justify-between px-16 py-6 lg:flex"
+    >
       <LogoFull />
       <NuxtLink to="/" class="text-sm text-white hover:text-gray-300">
         <Icon name="lucide:home" class="mr-2 inline-block size-5" />
