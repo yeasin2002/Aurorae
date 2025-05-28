@@ -21,7 +21,7 @@ useSeoMeta({
         <ClientOnly>
           <div class="absolute top-0 left-0 h-full w-full overflow-hidden rounded-lg  overflow-x-hidden select-none">
             <FlickeringGrid
-              class="relative inset-0 -left-1/2 z-0 h-full w-full [mask-image:radial-gradient(450px_circle_at_center,white,transparent)] select-none opacity-50  "
+              class="relative inset-0 -left-1/2 z-0 h-full w-full [mask-image:radial-gradient(450px_circle_at_center,white,transparent)] !select-none opacity-50  "
               :square-size="4"
               :grid-gap="6"
               color="#FED500"

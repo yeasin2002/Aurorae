@@ -8,7 +8,7 @@ useSeoMeta({
 });
 
 import { AuthInput } from "@/components/ui-custom";
-import { OAuth } from "@/feature/auth";
+import { AuthHeading, OAuth } from "@/feature/auth";
 import { Form } from "vee-validate";
 import { toast } from "vue3-toastify";
 import { signUpSchema } from "~/schema/auth.schema";
@@ -22,8 +22,10 @@ const onSubmit = (formValues: unknown) => {
 <template>
   <div class="flex items-center justify-center p-8">
     <div class="w-full max-w-sm">
-      <h1 class="mb-2 text-3xl font-semibold">Create an account</h1>
-      <p class="mb-8 text-gray-500">Enter your email below to create your account</p>
+      <AuthHeading
+        heading="Create an account"
+        desc="Enter your email below to create your account"
+      />
 
       <Form class="mb-6 space-y-3" :validation-schema="signUpSchema" @submit="onSubmit">
         <AuthInput name="name" type="text" placeholder="Enter your full name" />
