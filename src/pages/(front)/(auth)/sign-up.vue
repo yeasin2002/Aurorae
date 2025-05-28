@@ -6,19 +6,12 @@ definePageMeta({
 useSeoMeta({
   title: "sign up",
 });
-
+  
 import { AuthInput } from "@/components/ui-custom";
 import { useToast } from "@/components/ui/toast/use-toast";
 import { OAuth } from "@/feature/auth";
-import { Field, Form, useForm } from "vee-validate";
+import { Form } from "vee-validate";
 import { signUpSchema } from "~/schema/auth.schema";
-
-// const { handleSubmit, errors } = useForm({ validationSchema: signUpSchema });
-
-// const { value: email, errorMessage: emailError } = useField("email");
-// const { value: password, errorMessage: passwordError } = useField("password");
-// const { value: name, errorMessage: nameError } = useField("name");
-// const { value: confirmPassword, errorMessage: confirmPasswordError } = useField("confirmPassword");
 
 const { toast } = useToast();
 

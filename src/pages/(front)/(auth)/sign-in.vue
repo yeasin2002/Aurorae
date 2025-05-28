@@ -9,18 +9,14 @@ useSeoMeta({
 import { AuthInput } from "@/components/ui-custom";
 import { useToast } from "@/components/ui/toast/use-toast";
 import { OAuth } from "@/feature/auth";
-import { useForm } from "vee-validate";
+import { Form, type GenericObject } from "vee-validate";
 import { type SignInFormType, signInSchema } from "~/schema/auth.schema";
-
-// const { handleSubmit } = useForm({ validationSchema: signInSchema });
-
-// const { value: password, errorMessage: passwordError } = useField("password");
-// const { value: email, errorMessage: emailError } = useField("email");
 
 const { toast } = useToast();
 
-const onSubmit = (values: SignInFormType) => {
-  console.log("Submitted", values);
+const onSubmit = (values: GenericObject) => {
+  const { email, password } = values as SignInFormType;
+  console.log("Submitted", email, password);
   toast({
     title: "Scheduled: Catch up",
     description: "Friday, February 10, 2023 at 5:57 PM",
@@ -31,8 +27,8 @@ const onSubmit = (values: SignInFormType) => {
 <template>
   <Form
     class="flex items-center justify-center p-8"
-    @submit.prevent="onSubmit"
     :validation-schema="signInSchema"
+    @submit="onSubmit"
   >
     <div class="w-full max-w-sm">
       <h1 class="mb-2 text-3xl font-semibold">Log into your account</h1>
@@ -40,7 +36,6 @@ const onSubmit = (values: SignInFormType) => {
 
       <div class="mb-6 space-y-3">
         <AuthInput type="email" placeholder="gmail@example.com" name="email" />
-
         <AuthInput type="password" placeholder="password" name="password" />
 
         <button

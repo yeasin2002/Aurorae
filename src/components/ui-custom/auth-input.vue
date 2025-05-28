@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { Field, Form } from "vee-validate";
+import { ErrorMessage, Field } from "vee-validate";
 
 const props = defineProps<{
   name: string;
@@ -27,10 +27,9 @@ const props = defineProps<{
     />
     <ErrorMessage
       :name="props.name"
-      :class="
-        props.errorMsg ? 'px-1 text-xs text-red-500/60 opacity-100 transition-colors' : 'opacity-0'
-      "
-    />
+      class="px-1 text-xs text-red-500/60 opacity-100 transition-colors"
+      />
+      <!-- class="props.errorMsg ? 'px-1 text-xs text-red-500/60 opacity-100 transition-colors' : 'opacity-0'" -->
 
     <!-- <p
       :class="
