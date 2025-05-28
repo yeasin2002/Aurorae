@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { Field, Form } from "vee-validate";
 
 const props = defineProps<{
+  name: string;
   type?: string;
   placeholder?: string;
   value?: string;
@@ -13,7 +15,7 @@ const props = defineProps<{
 
 <template>
   <div>
-    <input
+    <Field
       v-bind="props"
       :class="
         cn(
@@ -23,12 +25,19 @@ const props = defineProps<{
         )
       "
     />
-    <p
+    <ErrorMessage
+      :name="props.name"
+      :class="
+        props.errorMsg ? 'px-1 text-xs text-red-500/60 opacity-100 transition-colors' : 'opacity-0'
+      "
+    />
+
+    <!-- <p
       :class="
         props.errorMsg ? 'px-1 text-xs text-red-500/60 opacity-100 transition-colors' : 'opacity-0'
       "
     >
       {{ props.errorMsg }}
-    </p>
+    </p> -->
   </div>
 </template>
