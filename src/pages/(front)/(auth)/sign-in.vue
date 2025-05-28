@@ -7,20 +7,17 @@ useSeoMeta({
 });
 
 import { AuthInput } from "@/components/ui-custom";
-import { useToast } from "@/components/ui/toast/use-toast";
+
 import { OAuth } from "@/feature/auth";
 import { Form, type GenericObject } from "vee-validate";
 import { type SignInFormType, signInSchema } from "~/schema/auth.schema";
 
-const { toast } = useToast();
+import { toast } from "vue3-toastify";
 
 const onSubmit = (values: GenericObject) => {
   const { email, password } = values as SignInFormType;
   console.log("Submitted", email, password);
-  toast({
-    title: "Scheduled: Catch up",
-    description: "Friday, February 10, 2023 at 5:57 PM",
-  });
+  toast.success("Sign In completed");
 };
 </script>
 

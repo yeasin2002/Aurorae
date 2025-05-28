@@ -6,21 +6,16 @@ definePageMeta({
 useSeoMeta({
   title: "sign up",
 });
-  
+
 import { AuthInput } from "@/components/ui-custom";
-import { useToast } from "@/components/ui/toast/use-toast";
 import { OAuth } from "@/feature/auth";
 import { Form } from "vee-validate";
+import { toast } from "vue3-toastify";
 import { signUpSchema } from "~/schema/auth.schema";
-
-const { toast } = useToast();
 
 const onSubmit = (formValues: unknown) => {
   console.log("Submitted", formValues);
-  toast({
-    title: "Sing UP completed",
-    description: "continue to sign in",
-  });
+  toast.success("Sign In completed");
 };
 </script>
 
@@ -57,7 +52,7 @@ const onSubmit = (formValues: unknown) => {
 
       <p class="mt-8 text-center text-sm text-gray-500">
         Already have any account,
-        <NuxtLink to="/sign-in" class="text-white underline">login instead</NuxtLink>
+        <NuxtLink to="/sign-in" class="text-white underline">sign-in instead</NuxtLink>
       </p>
     </div>
   </div>
