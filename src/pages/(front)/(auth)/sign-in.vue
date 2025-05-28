@@ -7,6 +7,7 @@ useSeoMeta({
 });
 
 import { AuthInput } from "@/components/ui-custom";
+import { AuthHeading } from "@/feature/auth";
 
 import { OAuth } from "@/feature/auth";
 import { Form, type GenericObject } from "vee-validate";
@@ -19,6 +20,8 @@ const onSubmit = (values: GenericObject) => {
   console.log("Submitted", email, password);
   toast.success("Sign In completed");
 };
+
+// Enter your email below to create your account
 </script>
 
 <template>
@@ -28,8 +31,7 @@ const onSubmit = (values: GenericObject) => {
     @submit="onSubmit"
   >
     <div class="w-full max-w-sm">
-      <h1 class="mb-2 text-3xl font-semibold">Log into your account</h1>
-      <p class="mb-8 text-gray-500">Enter your email below to create your account</p>
+      <AuthHeading heading="Welcome back" desc="Sign in to your account" />
 
       <div class="mb-6 space-y-3">
         <AuthInput type="email" placeholder="gmail@example.com" name="email" />
