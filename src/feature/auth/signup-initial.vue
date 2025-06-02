@@ -9,24 +9,22 @@ const emit = defineEmits(["toggle-sign-in-process"]);
 
 const onSubmit = async (values: GenericObject) => {
   const formValues = values as SignInFormType;
-  console.log("Submitted", formValues);
-  toast.success("Sign In completed");
-  emit("toggle-sign-in-process");
 
-  //   try {
-  //     const { data, error } = await useSupabase().auth.signUp({
-  //       email: formValues.email,
-  //       password: formValues.password,
-  //     });
+  try {
+    const { data, error } = await useSupabase().auth.signUp({
+      email: formValues.email,
+      password: formValues.password,
+    });
 
-  //     if (error) {
-  //       console.error("Error inserting user data:", error);
-  //     } else {
-  //       console.log("User registered successfully:", data);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
+    if (error) new Error(error.message);
+
+    emit("toggle-sign-in-process");
+    toast.success("Sign In completed");
+    console.log(`data: `, data);
+  } catch (error: any) {
+    console.log(error);
+    toast.error(error?.message || `Something went wrong`);
+  }
 };
 </script>
 
